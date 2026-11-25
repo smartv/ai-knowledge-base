@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0010",
+  "title": "NousResearch/hermes-agent",
+  "source": "github_trending",
+  "source_url": "https://github.com/NousResearch/hermes-agent",
+  "source_id": "NousResearch/hermes-agent",
+  "author": "NousResearch",
+  "language": "en",
+  "published_at": "2026-11-25T04:07:56Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "NousResearch/hermes-agent 是 NousResearch 在 GitHub 上开源的 AI 智能体项目，以 Python 实现，仓库描述为“与你共同成长的智能体”。从 Topics 看，它面向 LLM 驱动的 agent 场景，并标注了 Anthropic、ChatGPT、Claude、Claude Code、Codex、OpenAI 等兼容或相关生态关键词，定位偏向可随使用不断演进的通用智能体框架。它值得关注的原因在于：项目热度极高（Stars 约 26.6 万），由知名开源模型团队 NousResearch 维护，且同时覆盖多家主流模型与编码助手生态，可能为开发者提供统一的 agent 构建与集成入口。但条目未披露具体架构、能力边界与实现细节，实际价值仍需结合代码与文档进一步验证。",
+  "key_points": [
+    "NousResearch 开源的 Python 智能体项目，Stars 约 26.6 万",
+    "描述为“与你共同成长的智能体”，强调可演进性",
+    "Topics 覆盖 Anthropic、OpenAI、Claude Code、Codex 等生态",
+    "定位 LLM 驱动的通用 agent，具体架构与能力未在描述中说明"
+  ],
+  "tags": [
+    "agent",
+    "llm",
+    "open-source"
+  ],
+  "category": "framework",
+  "relevance_score": 0.7,
+  "score": 7,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

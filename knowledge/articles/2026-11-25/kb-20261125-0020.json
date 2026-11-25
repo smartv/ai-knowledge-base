@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0020",
+  "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+  "source": "rss",
+  "source_url": "https://huggingface.co/blog/allenai/robotrack",
+  "source_id": "https://huggingface.co/blog/allenai/robotrack",
+  "author": "hugging-face",
+  "language": "en",
+  "published_at": "2026-11-23T17:20:37Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "RoboTrack 是 AllenAI 在 Hugging Face 博客上发布的关于面向真实世界机器人操作的点跟踪（point tracking）工作的条目。从标题看，它聚焦于机器人操作场景中的点跟踪问题，即对物体表面关键点进行持续追踪，以支撑真实环境下的操作任务。该条目没有提供描述，因此无法确认其具体方法、模型结构、数据集或评测结果。值得关注之处在于：点跟踪是机器人感知与操作的重要基础能力，若该工作面向真实世界场景，可能对机器人操作的可泛化性与鲁棒性有参考价值；同时其发布在 Hugging Face 博客，可能伴随开源资源。但由于信息有限，实际贡献与效果需以原文为准。",
+  "key_points": [
+    "标题指向真实世界机器人操作中的点跟踪问题",
+    "条目无描述，具体方法与结果无法确认",
+    "点跟踪是机器人操作感知的基础能力之一",
+    "发布于 Hugging Face 博客，可能附带开源资源"
+  ],
+  "tags": [
+    "research",
+    "vision",
+    "paper"
+  ],
+  "category": "paper",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hugging-face-20261125T041034699558Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

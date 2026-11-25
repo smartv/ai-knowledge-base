@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0018",
+  "title": "Journal proofing AI alters researcher's accepted paper without tracking",
+  "source": "hacker_news",
+  "source_url": "https://bsky.app/profile/yungenchee.bsky.social/post/3n325cjuhxk2g",
+  "source_id": "https://news.ycombinator.com/item?id=50638242",
+  "author": "pelican0",
+  "language": "en",
+  "published_at": "2026-11-25T03:51:08Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "该条目来自 Hacker News，指向一条 Bluesky 帖子，标题称期刊校对环节使用的 AI 在未留下修改追踪记录的情况下改动了研究者已获接收的论文。条目本身仅提供标题、链接与极简描述，未包含具体期刊名称、改动内容、影响范围或涉事 AI 系统的细节，因此只能确认其核心议题是学术出版流程中 AI 介入校对所引发的可追溯性与作者控制权问题。值得关注之处在于：若 AI 能在作者不知情时修改已录用稿件且不记录变更，将直接冲击学术记录的完整性、作者署名责任与出版伦理，也提示校对类 AI 工具需要强制变更日志与人工确认机制。由于缺乏一手细节与多方核实，该信息目前应视为待验证的个案报告，评分从严。",
+  "key_points": [
+    "标题称期刊校对 AI 未经追踪地改动已录用论文",
+    "涉及学术出版中 AI 改稿的可追溯性与作者控制权",
+    "条目仅有标题与链接，缺少期刊、改动内容等细节",
+    "提示校对类 AI 需强制变更日志与人工确认",
+    "信息未经多方核实，应视为待验证个案"
+  ],
+  "tags": [
+    "ai",
+    "research",
+    "opinion"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hacker-news-20261125T041034699152Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

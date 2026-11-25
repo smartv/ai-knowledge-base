@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0001",
+  "title": "BerriAI/litellm",
+  "source": "github_trending",
+  "source_url": "https://github.com/BerriAI/litellm",
+  "source_id": "BerriAI/litellm",
+  "author": "BerriAI",
+  "language": "en",
+  "published_at": "2026-11-25T04:07:32Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "BerriAI/litellm 是一个 AI Gateway（LLM 网关），采用 Rust 核心与 Python SDK，可用 OpenAI 格式或各厂商原生格式调用 100+ LLM API，并内置成本追踪、guardrails、负载均衡与日志能力，覆盖 Bedrock、Azure、OpenAI、Anthropic、VertexAI、vLLM、Nvidia NIM 等后端。它解决的是多模型接入时接口不统一、成本不透明、缺乏统一治理与容错的问题，让团队以单一入口管理多家模型供应商。值得关注的原因在于：它已获得约 6.4 万 Stars，说明在多模型网关这一 LLMOps 关键环节有较高采用度；同时以 Rust 重写核心强调性能，并涉及 MCP gateway 等较新方向，对需要统一调用层与可观测性的团队具有参考价值。",
+  "key_points": [
+    "Rust 核心加 Python SDK，定位为快速轻量的 AI Gateway",
+    "统一以 OpenAI 或原生格式调用 100+ LLM API",
+    "内置成本追踪、guardrails、负载均衡与日志",
+    "覆盖 Bedrock、Azure、OpenAI、Anthropic、VertexAI、vLLM 等后端",
+    "Stars 约 6.4 万，属 LLMOps 网关方向高关注项目"
+  ],
+  "tags": [
+    "llm",
+    "infrastructure",
+    "open-source"
+  ],
+  "category": "framework",
+  "relevance_score": 0.8,
+  "score": 8,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

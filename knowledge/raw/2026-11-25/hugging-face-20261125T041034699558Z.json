@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "feed": "hugging-face",
+  "source": "rss",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "count": 4,
+  "items": [
+    {
+      "feed": "hugging-face",
+      "source": "rss",
+      "source_id": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+      "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+      "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+      "author": "hugging-face",
+      "description": "",
+      "published_at": "2026-11-24T16:34:13Z",
+      "collected_at": "2026-11-25T04:10:18Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://huggingface.co/blog/feed.xml"
+      }
+    },
+    {
+      "feed": "hugging-face",
+      "source": "rss",
+      "source_id": "https://huggingface.co/blog/allenai/robotrack",
+      "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+      "url": "https://huggingface.co/blog/allenai/robotrack",
+      "author": "hugging-face",
+      "description": "",
+      "published_at": "2026-11-23T17:20:37Z",
+      "collected_at": "2026-11-25T04:10:18Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://huggingface.co/blog/feed.xml"
+      }
+    },
+    {
+      "feed": "hugging-face",
+      "source": "rss",
+      "source_id": "https://huggingface.co/blog/agentic-evals",
+      "title": "How to build and maintain an agentic evaluation",
+      "url": "https://huggingface.co/blog/agentic-evals",
+      "author": "hugging-face",
+      "description": "",
+      "published_at": "2026-11-23T00:00:00Z",
+      "collected_at": "2026-11-25T04:10:18Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://huggingface.co/blog/feed.xml"
+      }
+    },
+    {
+      "feed": "hugging-face",
+      "source": "rss",
+      "source_id": "https://huggingface.co/blog/inkling2mini",
+      "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+      "url": "https://huggingface.co/blog/inkling2mini",
+      "author": "hugging-face",
+      "description": "",
+      "published_at": "2026-11-20T00:00:00Z",
+      "collected_at": "2026-11-25T04:10:18Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://huggingface.co/blog/feed.xml"
+      }
+    }
+  ]
+}

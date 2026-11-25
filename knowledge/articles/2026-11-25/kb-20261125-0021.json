@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0021",
+  "title": "Strix Halo AI Toolboxes",
+  "source": "hacker_news",
+  "source_url": "https://strix-halo-toolboxes.com/",
+  "source_id": "https://news.ycombinator.com/item?id=50638327",
+  "author": "teleforce",
+  "language": "en",
+  "published_at": "2026-11-25T04:05:30Z",
+  "collected_at": "2026-11-25T04:12:53Z",
+  "summary": "该条目为 Hacker News 上发布的一个链接，指向名为 Strix Halo AI Toolboxes 的网站，标题与描述均未提供具体功能、技术细节或使用说明，仅给出文章地址。从名称推测可能与 AI 工具集合相关，但缺乏原文内容支撑，无法确认其解决的问题、适用场景或技术价值。由于信息量极少且热度仅为 1，暂不具备深入分析基础，值得关注的程度有限，建议获取页面正文后再做评估。",
+  "key_points": [
+    "条目仅含标题与链接，无实质内容描述",
+    "名称暗示为 AI 工具箱集合，但未经证实",
+    "Hacker News 热度仅 1，社区关注度低",
+    "缺少技术细节，无法判断实际用途"
+  ],
+  "tags": [
+    "tool",
+    "ai",
+    "open-source"
+  ],
+  "category": "tool",
+  "relevance_score": 0.2,
+  "score": 2,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hacker-news-20261125T041303588731Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0017",
+  "title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+  "source": "rss",
+  "source_url": "https://huggingface.co/blog/inkling2mini",
+  "source_id": "https://huggingface.co/blog/inkling2mini",
+  "author": "hugging-face",
+  "language": "en",
+  "published_at": "2026-11-20T00:00:00Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "该条目是 Hugging Face 博客发布的一篇公告，标题为 Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup，发布时间为 2026-11-20。从标题可判断，这是一款名为 Inkling 2 Mini 的模型发布内容，主打在本地环境中提供前沿性能，面向希望在自有设备上部署运行模型的用户。条目未提供描述，因此无法确认模型参数规模、架构、训练方法、基准测试成绩或具体硬件要求。其值得关注之处在于，Hugging Face 博客通常承载开源模型或工具的正式发布，若该模型确为本地可用的高性能模型，可能降低本地部署门槛，为关注开源模型与本地推理的开发者提供新选择；但在缺少细节的情况下，实际能力与适用范围仍需以原文为准。",
+  "key_points": [
+    "Hugging Face 博客发布 Inkling 2 Mini 模型公告",
+    "标题强调面向本地环境的前沿性能",
+    "无描述，参数规模与基准成绩未知",
+    "可能面向本地部署与开源模型用户"
+  ],
+  "tags": [
+    "llm",
+    "open-source",
+    "deployment"
+  ],
+  "category": "model",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hugging-face-20261125T041034699558Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

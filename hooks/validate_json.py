@@ -33,12 +33,18 @@ REQUIRED_FIELDS: dict[str, type] = {
     "status": str,
 }
 
-VALID_STATUSES = frozenset({"draft", "review", "published", "archived"})
+VALID_STATUSES = frozenset(
+    {"draft", "review", "published", "archived", "analyzed", "rejected"}
+)
 VALID_AUDIENCES = frozenset({"beginner", "intermediate", "advanced"})
 
 ID_PATTERN = re.compile(
-    r"^(?P<source>[a-z][a-z0-9_]*(?:-[a-z0-9_]+)*)"
-    r"-(?P<date>\d{8})-(?P<seq>\d{3})$"
+    r"^(?:"
+    r"(?P<source>[a-z][a-z0-9_]*(?:-[a-z0-9_]+)*)"
+    r"-(?P<date>\d{8})-(?P<seq>\d{3})"
+    r"|"
+    r"kb-(?P<kb_date>\d{8})-(?P<kb_seq>\d{4})"
+    r")$"
 )
 
 SUMMARY_MIN_LENGTH = 20
@@ -144,21 +150,23 @@ def _validate_required_fields(data: Mapping[str, Any]) -> list[ValidationError]:
 
 
 def _validate_id(value: str) -> list[ValidationError]:
-    """Validate the ``{source}-{YYYYMMDD}-{NNN}`` identifier format."""
+    """Validate ``{source}-{YYYYMMDD}-{NNN}`` or ``kb-{YYYYMMDD}-{NNNN}``."""
     match = ID_PATTERN.fullmatch(value)
     if match is None:
         return [
             ValidationError(
                 "id",
-                "格式应为 {source}-{YYYYMMDD}-{NNN}，"
-                f"例如 github-20260317-001，实际为 {value!r}",
+                "格式应为 {source}-{YYYYMMDD}-{NNN}（如 github-20260317-001）"
+                f" 或 kb-{{YYYYMMDD}}-{{NNNN}}（如 kb-20260317-0001），"
+                f"实际为 {value!r}",
             )
         ]
 
+    date_part = match.group("date") or match.group("kb_date")
     try:
-        datetime.strptime(match.group("date"), "%Y%m%d")
+        datetime.strptime(date_part, "%Y%m%d")
     except ValueError:
-        return [ValidationError("id", f"日期部分 {match.group('date')} 不是有效日期")]
+        return [ValidationError("id", f"日期部分 {date_part} 不是有效日期")]
 
     return []
 

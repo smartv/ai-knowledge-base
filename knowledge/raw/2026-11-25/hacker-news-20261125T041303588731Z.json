@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "feed": "hacker-news",
+  "source": "hacker_news",
+  "collected_at": "2026-11-25T04:12:53Z",
+  "count": 2,
+  "items": [
+    {
+      "feed": "hacker-news",
+      "source": "hacker_news",
+      "source_id": "https://news.ycombinator.com/item?id=50638327",
+      "title": "Strix Halo AI Toolboxes",
+      "url": "https://strix-halo-toolboxes.com/",
+      "author": "teleforce",
+      "description": "Article URL: https://strix-halo-toolboxes.com/",
+      "published_at": "2026-11-25T04:05:30Z",
+      "collected_at": "2026-11-25T04:12:53Z",
+      "popularity": 1,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://hnrss.org/newest?q=AI+OR+LLM+OR+agent"
+      }
+    },
+    {
+      "feed": "hacker-news",
+      "source": "hacker_news",
+      "source_id": "https://news.ycombinator.com/item?id=50638242",
+      "title": "Journal proofing AI alters researcher's accepted paper without tracking",
+      "url": "https://bsky.app/profile/yungenchee.bsky.social/post/3n325cjuhxk2g",
+      "author": "pelican0",
+      "description": "Article URL: https://bsky.app/profile/yungenchee.bsky.social/post/3n325cjuhxk2g",
+      "published_at": "2026-11-25T03:51:08Z",
+      "collected_at": "2026-11-25T04:12:53Z",
+      "popularity": 1,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://hnrss.org/newest?q=AI+OR+LLM+OR+agent"
+      }
+    }
+  ]
+}

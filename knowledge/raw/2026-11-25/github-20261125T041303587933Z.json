@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "feed": "github",
+  "source": "github_trending",
+  "collected_at": "2026-11-25T04:12:51Z",
+  "count": 5,
+  "items": [
+    {
+      "feed": "github",
+      "source": "github_trending",
+      "source_id": "affaan-m/ECC",
+      "title": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "author": "affaan-m",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.\nTopics: ai-agents, anthropic, claude, claude-code, developer-tools, llm, mcp, productivity; Stars: 310269; Language: JavaScript; Topic query: llm",
+      "published_at": "2026-11-23T04:55:48Z",
+      "collected_at": "2026-11-25T04:12:51Z",
+      "popularity": 310269,
+      "language": "en",
+      "extra": {
+        "stars": 310269,
+        "forks": 45611,
+        "language": "JavaScript",
+        "topics": [
+          "ai-agents",
+          "anthropic",
+          "claude",
+          "claude-code",
+          "developer-tools",
+          "llm",
+          "mcp",
+          "productivity"
+        ],
+        "homepage": "https://ecc.tools",
+        "query_topic": "llm"
+      }
+    },
+    {
+      "feed": "github",
+      "source": "github_trending",
+      "source_id": "NousResearch/hermes-agent",
+      "title": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "author": "NousResearch",
+      "description": "The agent that grows with you\nTopics: ai, ai-agent, ai-agents, anthropic, chatgpt, claude, claude-code, codex, hermes, hermes-agent, llm, nous-research, openai; Stars: 265930; Language: Python; Topic query: llm",
+      "published_at": "2026-11-25T04:12:37Z",
+      "collected_at": "2026-11-25T04:12:51Z",
+      "popularity": 265930,
+      "language": "en",
+      "extra": {
+        "stars": 265930,
+        "forks": 60262,
+        "language": "Python",
+        "topics": [
+          "ai",
+          "ai-agent",
+          "ai-agents",
+          "anthropic",
+          "chatgpt",
+          "claude",
+          "claude-code",
+          "codex",
+          "hermes",
+          "hermes-agent",
+          "llm",
+          "nous-research",
+          "openai"
+        ],
+        "homepage": "https://hermes-agent.nousresearch.com",
+        "query_topic": "llm"
+      }
+    },
+    {
+      "feed": "github",
+      "source": "github_trending",
+      "source_id": "deepseek-ai/deepseek-harness",
+      "title": "deepseek-ai/deepseek-harness",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "author": "deepseek-ai",
+      "description": "DeepSeek Harness: Everything is a Plugin.\nTopics: ai-agents, cordis, dsh, dsh-plugin; Stars: 286642; Language: TypeScript; Topic query: ai-agents",
+      "published_at": "2026-11-22T11:00:05Z",
+      "collected_at": "2026-11-25T04:12:51Z",
+      "popularity": 286642,
+      "language": "en",
+      "extra": {
+        "stars": 286642,
+        "forks": 35715,
+        "language": "TypeScript",
+        "topics": [
+          "ai-agents",
+          "cordis",
+          "dsh",
+          "dsh-plugin"
+        ],
+        "homepage": "https://deepseek.com/harness",
+        "query_topic": "ai-agents"
+      }
+    },
+    {
+      "feed": "github",
+      "source": "github_trending",
+      "source_id": "open-webui/open-webui",
+      "title": "open-webui/open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "author": "open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)\nTopics: ai, llm, llm-ui, llm-webui, llms, mcp, ollama, ollama-webui, open-webui, openai, openapi, rag, self-hosted, ui, webui; Stars: 159467; Language: Svelte; Topic query: rag",
+      "published_at": "2026-11-25T01:23:38Z",
+      "collected_at": "2026-11-25T04:12:51Z",
+      "popularity": 159467,
+      "language": "en",
+      "extra": {
+        "stars": 159467,
+        "forks": 23143,
+        "language": "Svelte",
+        "topics": [
+          "ai",
+          "llm",
+          "llm-ui",
+          "llm-webui",
+          "llms",
+          "mcp",
+          "ollama",
+          "ollama-webui",
+          "open-webui",
+          "openai",
+          "openapi",
+          "rag",
+          "self-hosted",
+          "ui",
+          "webui"
+        ],
+        "homepage": "https://openwebui.com",
+        "query_topic": "rag"
+      }
+    },
+    {
+      "feed": "github",
+      "source": "github_trending",
+      "source_id": "Graphify-Labs/graphify",
+      "title": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "author": "Graphify-Labs",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.\nTopics: ai-agents, antigravity, ast, claude-code, code-analysis, code-search, codex, cursor, developer-tools, gemini, graphify, graphrag, knowledge-graph, leiden, llm, mcp, openclaw, rag, skills, tree-sitter; Stars: 153047; Language: Python; Topic query: rag",
+      "published_at": "2026-11-24T21:58:21Z",
+      "collected_at": "2026-11-25T04:12:51Z",
+      "popularity": 153047,
+      "language": "en",
+      "extra": {
+        "stars": 153047,
+        "forks": 14719,
+        "language": "Python",
+        "topics": [
+          "ai-agents",
+          "antigravity",
+          "ast",
+          "claude-code",
+          "code-analysis",
+          "code-search",
+          "codex",
+          "cursor",
+          "developer-tools",
+          "gemini",
+          "graphify",
+          "graphrag",
+          "knowledge-graph",
+          "leiden",
+          "llm",
+          "mcp",
+          "openclaw",
+          "rag",
+          "skills",
+          "tree-sitter"
+        ],
+        "homepage": "graphify.com",
+        "query_topic": "rag"
+      }
+    }
+  ]
+}

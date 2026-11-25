@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0008",
+  "title": "ComposioHQ/composio",
+  "source": "github_trending",
+  "source_url": "https://github.com/ComposioHQ/composio",
+  "source_id": "ComposioHQ/composio",
+  "author": "ComposioHQ",
+  "language": "en",
+  "published_at": "2026-11-25T01:14:22Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "Composio 是一个面向 AI 智能体开发的开源工具集成框架，提供 1000+ 工具包、工具搜索、上下文管理、认证以及沙箱化工作台，目标是让智能体把用户意图转化为实际动作。它解决的核心问题是智能体与外部工具、API 之间的连接与鉴权繁琐、上下文难以统一管理，开发者无需为每个集成重复搭建适配层。项目以 TypeScript 实现，覆盖 Python、JavaScript 生态，并涉及 MCP、远程 MCP 服务器与 SSE 等接口形态，属于 LLMOps 与函数调用方向的基础设施。其高热度说明工具调用与智能体落地需求旺盛，值得关注其工具生态规模与沙箱执行能力。",
+  "key_points": [
+    "提供 1000+ 工具包与工具搜索，降低智能体集成外部 API 的成本",
+    "内置认证、上下文管理与沙箱工作台，覆盖从意图到执行的链路",
+    "TypeScript 实现，支持 Python/JS 生态及 MCP、SSE 等接口",
+    "定位 LLMOps 与函数调用基础设施，热度反映智能体落地需求"
+  ],
+  "tags": [
+    "agent",
+    "tool-use",
+    "llm"
+  ],
+  "category": "framework",
+  "relevance_score": 0.7,
+  "score": 7,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

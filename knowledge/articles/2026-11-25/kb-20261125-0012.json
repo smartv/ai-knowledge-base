@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0012",
+  "title": "torchtsetlin: Fast, Interpretable Tsetlin Machines for PyTorch",
+  "source": "rss",
+  "source_url": "https://arxiv.org/abs/2611.28195",
+  "source_id": "oai:arXiv.org:2611.28195v1",
+  "author": "Vajira Thambawita, P{\\aa}l Halvorsen, Ole-Christoffer Granmo",
+  "language": "en",
+  "published_at": "2026-11-24T05:00:00Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "torchtsetlin 是将 Tsetlin 机家族实现为普通 PyTorch 模块的软件包，覆盖 vanilla、weighted、coalesced、回归、序列/图像/体卷积以及逐像素分割等变体。它解决的问题是：Tsetlin 机虽以奖励惩罚驱动的自动机学习命题规则、模型天然可解释且评估成本低，但原有软件由 C 与 CUDA 内核加 scikit-learn 风格封装构成，游离于深度学习生态之外。torchtsetlin 把自动机做成张量缓冲区，模型可用 .to(device) 迁移、用 state_dict() 保存、用一次 update(x,y) 从 mini-batch 学习；核心技术是 Type I/II 反馈的批式形式化，将自动机状态转移转为事件计数并以二项抽样实现，每个 mini-batch 提交一次。在十个基准上精度与原库持平，除两个最小基准外训练速度显著更快。",
+  "key_points": [
+    "将 Tsetlin 机家族实现为普通 PyTorch 模块，覆盖多种变体",
+    "自动机作为张量缓冲区，支持 .to(device)、state_dict() 与单次 update",
+    "核心为 Type I/II 反馈的批式形式化，转移转为二项抽样事件计数",
+    "十个基准上精度与原库持平，多数基准训练速度更快",
+    "纯 Python、MIT 许可，使可解释规则模型融入深度学习生态"
+  ],
+  "tags": [
+    "framework",
+    "open-source",
+    "ai"
+  ],
+  "category": "framework",
+  "relevance_score": 0.6,
+  "score": 6,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/arxiv-cs-ai-20261125T041034699927Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0014",
+  "title": "Microduck Obstacle Avoidance: A Sim2Real Workflow with Isaac Lab and Newton",
+  "source": "rss",
+  "source_url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+  "source_id": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+  "author": "hugging-face",
+  "language": "en",
+  "published_at": "2026-11-24T16:34:13Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "该条目为 Hugging Face 博客上由 NVIDIA 发布的内容，标题指向一个名为 Microduck 的避障项目，采用 Isaac Lab 与 Newton 构建 Sim2Real（仿真到现实）工作流。从标题可判断，其核心是先在仿真环境中训练避障策略，再迁移到真实机器人或实体平台，以降低真机调试成本与风险。值得关注的原因在于：Isaac Lab 与 Newton 属于机器人仿真与物理引擎方向的基础设施，Sim2Real 流程的公开分享对具身智能与机器人学习实践具有参考价值；同时该内容发布于 Hugging Face 平台，可能附带可复用的代码或模型资源。由于描述为空，具体实现细节、性能数据与适用范围均无法确认，需查阅原文进一步核实。",
+  "key_points": [
+    "标题表明是 Microduck 避障的 Sim2Real 工作流",
+    "使用 Isaac Lab 与 Newton 作为仿真与物理引擎组件",
+    "核心思路是仿真训练后迁移到真实平台",
+    "发布在 Hugging Face 博客，可能含可复用资源",
+    "无描述，具体细节与效果需查原文"
+  ],
+  "tags": [
+    "open-source",
+    "framework",
+    "ai"
+  ],
+  "category": "framework",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hugging-face-20261125T041034699558Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

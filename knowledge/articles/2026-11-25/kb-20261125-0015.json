@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0015",
+  "title": "Open detection rules for AI agent attack frameworks",
+  "source": "hacker_news",
+  "source_url": "https://github.com/ThreatDefence/agentic-attack-detections",
+  "source_id": "https://news.ycombinator.com/item?id=50637987",
+  "author": "AntonGuzhevskiy",
+  "language": "en",
+  "published_at": "2026-11-25T03:18:00Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "该条目指向 ThreatDefence 在 GitHub 上发布的 agentic-attack-detections 项目，标题表明其内容是为 AI agent 攻击框架提供开放检测规则。从标题与描述可推断，它面向 AI agent 被恶意利用或攻击的场景，试图以公开规则集的形式帮助识别相关攻击行为，属于安全检测方向的开放资源。其价值在于把 agent 安全从概念讨论推进到可复用的检测规则层面，便于安全团队和 agent 开发者参考与集成。但条目仅给出仓库链接，未提供规则数量、覆盖的攻击类型、检测格式或使用方式等细节，实际效果与成熟度无法从现有信息判断，热度也较低，因此关注度应保持谨慎。",
+  "key_points": [
+    "为 AI agent 攻击框架提供开放检测规则",
+    "面向 agent 安全检测与威胁识别场景",
+    "以 GitHub 开源仓库形式发布，便于复用",
+    "缺少规则覆盖范围与检测格式等细节",
+    "热度较低，成熟度有待验证"
+  ],
+  "tags": [
+    "agent",
+    "ai-safety",
+    "open-source"
+  ],
+  "category": "tool",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hacker-news-20261125T041034699152Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

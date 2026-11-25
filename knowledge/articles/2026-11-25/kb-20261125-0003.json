@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0003",
+  "title": "Graphify-Labs/graphify",
+  "source": "github_trending",
+  "source_url": "https://github.com/Graphify-Labs/graphify",
+  "source_id": "Graphify-Labs/graphify",
+  "author": "Graphify-Labs",
+  "language": "en",
+  "published_at": "2026-11-24T21:58:21Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "Graphify 是一个将代码库及其文档、SQL schema、配置文件和 PDF 转化为可查询知识图谱的开源项目，以 /graphify 技能形式集成到 Claude Code、Cursor、Codex 和 Gemini CLI 等编码助手。它针对代码检索与理解场景，采用本地确定性 AST 解析构建图谱，每条边都有解释，且不依赖向量存储，从而规避嵌入检索的不透明性。项目以 Python 实现，涉及 tree-sitter、Leiden 社区发现和 GraphRAG 思路，热度极高。值得关注之处在于它把 RAG 从向量库转向显式图结构，为编码代理提供可审计、可解释的代码上下文，并覆盖多种主流 CLI 工具，对开发者工具与代理上下文工程有实际意义。",
+  "key_points": [
+    "把代码库、文档、SQL schema、配置和 PDF 转成可查询知识图谱",
+    "以 /graphify 技能接入 Claude Code、Cursor、Codex、Gemini CLI",
+    "本地确定性 AST 解析，每条边可解释，不使用向量存储",
+    "涉及 tree-sitter、Leiden 社区发现与 GraphRAG 思路",
+    "为编码代理提供可审计的图结构上下文，替代不透明向量检索"
+  ],
+  "tags": [
+    "rag",
+    "knowledge-base",
+    "coding-assistant"
+  ],
+  "category": "tool",
+  "relevance_score": 0.8,
+  "score": 8,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

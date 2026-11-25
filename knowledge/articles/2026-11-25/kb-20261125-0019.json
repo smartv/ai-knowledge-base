@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0019",
+  "title": "Marginalia Search, Money, C++, Rust, AI, Stuff",
+  "source": "hacker_news",
+  "source_url": "https://www.marginalia.nu/log/a_141_marginalia_update/",
+  "source_id": "https://news.ycombinator.com/item?id=50638220",
+  "author": "Curiositry",
+  "language": "en",
+  "published_at": "2026-11-25T03:47:42Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "这是 Marginalia Search 项目的一篇更新日志，标题涵盖搜索引擎项目本身、资金状况、C++ 与 Rust 技术选型以及 AI 相关话题。条目仅提供标题与链接，未给出正文细节，因此无法确认具体技术方案、数据或结论。其价值在于：Marginalia 是面向非商业化、独立网站的开放搜索项目，其工程与资金动向对关注开源搜索、检索基础设施及小型独立网络生态的读者具有参考意义；同时标题暗示项目在系统语言与 AI 方向上有所权衡，值得后续跟进原文。",
+  "key_points": [
+    "Marginalia Search 项目更新日志，涉及搜索项目自身进展",
+    "标题提及资金、C++ 与 Rust 技术选型及 AI 话题",
+    "条目未提供正文细节，具体内容需查阅原文",
+    "对开源搜索与独立网络生态有参考价值"
+  ],
+  "tags": [
+    "open-source",
+    "retrieval",
+    "infrastructure"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hacker-news-20261125T041034699152Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

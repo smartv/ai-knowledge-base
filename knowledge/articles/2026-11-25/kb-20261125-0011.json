@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0011",
+  "title": "SAMA: Training-Free Consensus Ridge Tracking for Camera-Based Heart Rate on Five Public Datasets",
+  "source": "rss",
+  "source_url": "https://arxiv.org/abs/2611.28185",
+  "source_id": "oai:arXiv.org:2611.28185v1",
+  "author": "Sudhakar Mishra",
+  "language": "en",
+  "published_at": "2026-11-24T05:00:00Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "SAMA 是一种面向远程光电容积脉搏波（rPPG）的无训练心率估计方法，针对现有基准通常只给每段视频一个心率、掩盖了远程问诊真正会读取的短时窗脉搏这一问题。它先对 POS 与 CHROM 两种色度谱做质量加权共识，再扣除由同帧运动、皮肤掩膜几何与背景亮度等无脉搏参考所占据的频率，随后用随机游走先验下的 Viterbi 脊线在时间上跟踪心率，最终输出经轨迹滤波、幅度归一化并带逐窗置信度的波形。方法不学习任何参数，也不做数据集特定调参。在五个公开数据集共 218 段、111 名参与者的记录上，统一人脸框与 rPPG-Toolbox 协议复现评分下，其各协议层级的平均 MAE 均为最低。值得关注的是它无需训练即可在短窗场景下稳定提升精度，对远程健康监测有实用价值。",
+  "key_points": [
+    "无训练、无数据集特定调参，直接融合 POS 与 CHROM 色度谱",
+    "用同帧运动、皮肤掩膜与背景亮度作无脉搏参考来抑制干扰频率",
+    "Viterbi 脊线加随机游走先验实现逐窗心率跟踪与置信度输出",
+    "五个公开数据集 218 段记录上各协议层级 MAE 均最低",
+    "10 秒短窗 MAE 为 5.05，对比基线 6.59，短时窗优势明显"
+  ],
+  "tags": [
+    "paper",
+    "benchmark",
+    "vision"
+  ],
+  "category": "paper",
+  "relevance_score": 0.6,
+  "score": 6,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/arxiv-cs-ai-20261125T041034699927Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

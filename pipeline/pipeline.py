@@ -21,6 +21,7 @@ Environment:
         Optional but recommended; raises the GitHub API rate limit.
 
 Layout:
+    pipeline/rss_sources.yaml                          RSS source configuration
     knowledge/raw/YYYY-MM-DD/{feed}-{timestamp}.json   append-only snapshots
     knowledge/articles/YYYY-MM-DD/{id}.json            validated entries
 """
@@ -70,6 +71,7 @@ LOGGER = logging.getLogger(__name__)
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_KNOWLEDGE_DIR = PROJECT_ROOT / "knowledge"
+DEFAULT_RSS_CONFIG = Path(__file__).resolve().with_name("rss_sources.yaml")
 
 USER_AGENT = "ai-knowledge-base/0.1"
 HTTP_TIMEOUT_SECONDS = 30.0
@@ -194,31 +196,181 @@ class RssFeed:
     Attributes:
         name: Short feed identifier used in logs and raw file names.
         url: Feed URL.
+        category: Human-readable category from the YAML configuration.
+        enabled: Whether the feed should be collected.
         source: Knowledge-entry source value for items from this feed.
     """
 
     name: str
     url: str
-    source: str
+    category: str = ""
+    enabled: bool = True
+    source: str = "rss"
 
 
-RSS_FEEDS: tuple[RssFeed, ...] = (
-    RssFeed(
-        name="hacker-news",
-        url="https://hnrss.org/newest?q=AI+OR+LLM+OR+agent",
-        source="hacker_news",
-    ),
-    RssFeed(
-        name="hugging-face",
-        url="https://huggingface.co/blog/feed.xml",
-        source="rss",
-    ),
-    RssFeed(
-        name="arxiv-cs-ai",
-        url="https://rss.arxiv.org/rss/cs.AI",
-        source="rss",
-    ),
-)
+def _strip_yaml_comment(value: str) -> str:
+    """Remove a trailing YAML comment that is outside quotes."""
+    in_single = False
+    in_double = False
+    for index, char in enumerate(value):
+        if char == "'" and not in_double:
+            in_single = not in_single
+        elif char == '"' and not in_single:
+            in_double = not in_double
+        elif char == "#" and not in_single and not in_double:
+            if index == 0 or value[index - 1].isspace():
+                return value[:index].rstrip()
+    return value
+
+
+def _parse_yaml_scalar(value: str) -> str | bool:
+    """Parse a boolean or quoted/plain string scalar."""
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+        return value[1:-1]
+
+    lowered = value.lower()
+    if lowered == "true":
+        return True
+    if lowered == "false":
+        return False
+    return value
+
+
+def _parse_source_entries(
+    text: str,
+    path: Path,
+) -> list[dict[str, str | bool]]:
+    """Parse the flat ``sources`` list used by ``rss_sources.yaml``.
+
+    Only the YAML subset needed by this project is supported: a ``sources:``
+    key followed by list items whose fields are plain ``key: value`` pairs.
+    Comments, blank lines, quoted strings and booleans are handled.
+    """
+    entries: list[dict[str, str | bool]] = []
+    current: dict[str, str | bool] | None = None
+
+    for lineno, raw_line in enumerate(text.splitlines(), start=1):
+        line = raw_line.strip()
+        if not line or line.startswith("#") or line in {"---", "..."}:
+            continue
+        if line == "sources:":
+            continue
+
+        if line.startswith("- "):
+            if current:
+                entries.append(current)
+            current = {}
+            line = line[2:].strip()
+
+        if not line:
+            continue
+        if ":" not in line:
+            raise PipelineError(
+                f"{path} 第 {lineno} 行不是 key: value 格式"
+            )
+
+        key, _, raw_value = line.partition(":")
+        key = key.strip()
+        value = _strip_yaml_comment(raw_value.strip())
+        if current is None:
+            raise PipelineError(
+                f"{path} 第 {lineno} 行必须位于 sources 列表项内"
+            )
+        if key in current:
+            raise PipelineError(
+                f"{path} 第 {lineno} 行重复字段: {key}"
+            )
+        current[key] = _parse_yaml_scalar(value)
+
+    if current:
+        entries.append(current)
+    if not entries:
+        raise PipelineError(f"{path} 未配置任何 RSS 源")
+    return entries
+
+
+def _build_rss_feed(
+    entry: Mapping[str, str | bool],
+    index: int,
+    path: Path,
+) -> RssFeed:
+    """Validate one parsed source entry and build an ``RssFeed``."""
+    required = ("name", "url", "category", "enabled")
+    missing = [field for field in required if field not in entry]
+    if missing:
+        raise PipelineError(
+            f"{path} 第 {index} 个源缺少字段: {', '.join(missing)}"
+        )
+
+    name = entry["name"]
+    url = entry["url"]
+    category = entry["category"]
+    enabled = entry["enabled"]
+
+    if not isinstance(name, str) or not name.strip():
+        raise PipelineError(f"{path} 第 {index} 个源的 name 不能为空")
+    if not isinstance(url, str) or not is_http_url(url):
+        raise PipelineError(
+            f"{path} 源 {name!r} 的 url 不是合法 HTTP(S) 地址"
+        )
+    if not isinstance(category, str) or not category.strip():
+        raise PipelineError(f"{path} 源 {name!r} 的 category 不能为空")
+    if not isinstance(enabled, bool):
+        raise PipelineError(f"{path} 源 {name!r} 的 enabled 必须是 true/false")
+
+    source = "hacker_news" if name.startswith("hacker-news") else "rss"
+    return RssFeed(
+        name=name.strip(),
+        url=url.strip(),
+        category=category.strip(),
+        enabled=enabled,
+        source=source,
+    )
+
+
+def load_rss_sources(path: Path | None = None) -> tuple[RssFeed, ...]:
+    """Load RSS source definitions from the YAML configuration.
+
+    Args:
+        path: Configuration file; defaults to ``pipeline/rss_sources.yaml``.
+
+    Returns:
+        Every configured feed, including disabled ones.
+
+    Raises:
+        PipelineError: If the file cannot be read, parsed, or validated.
+    """
+    config_path = path or DEFAULT_RSS_CONFIG
+    try:
+        text = config_path.read_text(encoding="utf-8")
+    except OSError as exc:
+        raise PipelineError(
+            f"无法读取 RSS 配置 {config_path}: {exc}"
+        ) from exc
+
+    entries = _parse_source_entries(text, config_path)
+    feeds: list[RssFeed] = []
+    names: set[str] = set()
+    urls: set[str] = set()
+
+    for index, entry in enumerate(entries, start=1):
+        feed = _build_rss_feed(entry, index, config_path)
+        if feed.name in names:
+            raise PipelineError(f"{config_path} 存在重复源名称: {feed.name}")
+        if feed.url in urls:
+            raise PipelineError(f"{config_path} 存在重复源地址: {feed.url}")
+        names.add(feed.name)
+        urls.add(feed.url)
+        feeds.append(feed)
+
+    enabled_count = sum(1 for feed in feeds if feed.enabled)
+    LOGGER.info(
+        "RSS 配置: %s（启用 %d/%d）",
+        config_path,
+        enabled_count,
+        len(feeds),
+    )
+    return tuple(feeds)
 
 SOURCE_CHOICES = ("github", "rss")
 
@@ -320,12 +472,14 @@ class PipelineConfig:
         limit: Maximum items per source.
         dry_run: Collect and report only; no LLM calls and no writes.
         knowledge_dir: Root directory containing ``raw/`` and ``articles/``.
+        rss_config: YAML file defining RSS feeds and their enabled flags.
     """
 
     sources: tuple[str, ...] = SOURCE_CHOICES
     limit: int = 20
     dry_run: bool = False
     knowledge_dir: Path = DEFAULT_KNOWLEDGE_DIR
+    rss_config: Path = DEFAULT_RSS_CONFIG
 
     def __post_init__(self) -> None:
         """Validate configuration values."""
@@ -815,7 +969,7 @@ def _rss_raw_item(
         collected_at=collected_at,
         popularity=popularity,
         language=detect_language(f"{title}\n{description}"),
-        extra={"feed_url": feed.url},
+        extra={"feed_url": feed.url, "feed_category": feed.category},
     )
 
 
@@ -842,23 +996,34 @@ def parse_feed(xml_text: str, feed: RssFeed, collected_at: str) -> list[RawItem]
     return items
 
 
-def collect_rss(limit: int, client: httpx.Client) -> list[RawItem]:
-    """Collect items from the configured RSS feeds.
+def collect_rss(
+    limit: int,
+    client: httpx.Client,
+    feeds: Sequence[RssFeed] | None = None,
+) -> list[RawItem]:
+    """Collect items from enabled RSS feeds.
 
     Args:
         limit: Maximum number of items to return across all feeds.
         client: Shared HTTP client.
+        feeds: Configured feeds; defaults to loading ``rss_sources.yaml``.
 
     Returns:
         Raw items, at most ``limit`` entries.
     """
-    per_feed = max(1, math.ceil(limit / len(RSS_FEEDS)))
+    configured = tuple(feeds) if feeds is not None else load_rss_sources()
+    active = [feed for feed in configured if feed.enabled]
+    if not active:
+        LOGGER.warning("没有启用的 RSS 源，跳过 RSS 采集")
+        return []
+
+    per_feed = max(1, math.ceil(limit / len(active)))
     collected_at = iso_utc(datetime.now(timezone.utc))
 
     items: list[RawItem] = []
     seen: set[str] = set()
 
-    for feed in RSS_FEEDS:
+    for feed in active:
         if len(items) >= limit:
             break
 
@@ -1534,7 +1699,8 @@ def _collect_raw_items(config: PipelineConfig) -> list[RawItem]:
         if "github" in config.sources:
             items.extend(collect_github(config.limit, client))
         if "rss" in config.sources:
-            items.extend(collect_rss(config.limit, client))
+            feeds = load_rss_sources(config.rss_config)
+            items.extend(collect_rss(config.limit, client, feeds))
     return items
 
 
@@ -1747,6 +1913,13 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         metavar="DIR",
         help="知识库根目录（默认项目下的 knowledge/）",
     )
+    parser.add_argument(
+        "--rss-config",
+        type=Path,
+        default=DEFAULT_RSS_CONFIG,
+        metavar="FILE",
+        help="RSS 数据源 YAML（默认 pipeline/rss_sources.yaml）",
+    )
     return parser.parse_args(argv)
 
 
@@ -1768,6 +1941,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         limit=args.limit,
         dry_run=args.dry_run,
         knowledge_dir=args.knowledge_dir.expanduser(),
+        rss_config=args.rss_config.expanduser(),
     )
 
     try:

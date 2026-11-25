@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0004",
+  "title": "langchain-ai/langchain",
+  "source": "github_trending",
+  "source_url": "https://github.com/langchain-ai/langchain",
+  "source_id": "langchain-ai/langchain",
+  "author": "langchain-ai",
+  "language": "en",
+  "published_at": "2026-11-25T02:45:17Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "langchain-ai/langchain 是 LangChain 官方开源的 Python 框架仓库，描述为“agent 工程平台”，Topics 覆盖 agents、multiagent、rag、llm、langgraph、openai、anthropic、gemini 等，当前星标约 15 万。它面向构建基于大模型的智能体与检索增强生成应用，提供统一的模型接入、工具调用与编排能力，缓解多模型、多工具集成与多智能体流程搭建的重复工程问题。其高星标与活跃生态说明它是 LLM 应用开发的重要基础设施，值得关注其 agent 工程方向的演进。",
+  "key_points": [
+    "LangChain 官方开源框架，定位为 agent 工程平台",
+    "Topics 覆盖 agents、multiagent、rag、llm 等方向",
+    "星标约 15 万，Python 实现，生态关注度高",
+    "面向 LLM 应用与智能体编排的集成开发"
+  ],
+  "tags": [
+    "llm",
+    "agent",
+    "open-source"
+  ],
+  "category": "framework",
+  "relevance_score": 0.8,
+  "score": 8,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

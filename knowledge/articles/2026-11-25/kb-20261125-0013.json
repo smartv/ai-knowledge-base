@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0013",
+  "title": "How to build and maintain an agentic evaluation",
+  "source": "rss",
+  "source_url": "https://huggingface.co/blog/agentic-evals",
+  "source_id": "https://huggingface.co/blog/agentic-evals",
+  "author": "hugging-face",
+  "language": "en",
+  "published_at": "2026-11-23T00:00:00Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "该条目是 Hugging Face 发布的一篇博客，标题为《How to build and maintain an agentic evaluation》，主题围绕如何构建与维护面向智能体（agentic）的评测体系。由于条目未提供描述，无法确认其具体方法、工具或案例细节，只能从标题判断其关注点在于评测流程的搭建与长期维护，而非单次基准测试。对从事 LLM 智能体开发的团队而言，评测是判断智能体行为是否可靠、可回归的关键环节，因此该主题具有实践参考价值，尤其适合关注 agent 工程化与评测基础设施的读者。但缺少正文信息，实际内容深度与可操作性尚不可知，建议阅读原文后再评估其价值。",
+  "key_points": [
+    "主题为智能体评测体系的构建与维护",
+    "条目无描述，具体方法与案例无法确认",
+    "评测是智能体工程化与回归验证的关键环节",
+    "适合关注 agent 评测基础设施的开发者参考"
+  ],
+  "tags": [
+    "agent",
+    "evaluation",
+    "llm"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hugging-face-20261125T041034699558Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

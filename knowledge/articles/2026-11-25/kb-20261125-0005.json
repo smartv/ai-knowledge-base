@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0005",
+  "title": "langfuse/langfuse",
+  "source": "github_trending",
+  "source_url": "https://github.com/langfuse/langfuse",
+  "source_id": "langfuse/langfuse",
+  "author": "langfuse",
+  "language": "en",
+  "published_at": "2026-11-24T22:19:41Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "Langfuse 是一个开源 AI 工程平台，提供 AI Gateway、agent 可观测性、评估以及 prompt/skill 管理，基于 OpenTelemetry 构建，支持自托管或使用 Langfuse Cloud。它面向 LLM 应用与 agent 的开发和运维，试图用统一平台覆盖每一次 AI 调用与每一个 agent，解决调用追踪、效果评估和提示词管理等分散工具带来的碎片化问题。项目以 TypeScript 实现，在 GitHub 上获得约 3.78 万星标，并关联 LangChain、LlamaIndex、OpenAI 等生态。其价值在于把可观测性、网关、评估与 prompt 管理整合为开源方案，降低 LLMOps 落地门槛，适合需要自托管和统一监控的团队关注。",
+  "key_points": [
+    "开源 AI 工程平台，整合网关、可观测性、评估与 prompt 管理",
+    "基于 OpenTelemetry 构建，支持自托管或 Langfuse Cloud",
+    "覆盖每次 AI 调用与 agent 的统一追踪和监控",
+    "TypeScript 实现，GitHub 星标约 3.78 万，生态兼容 LangChain 等"
+  ],
+  "tags": [
+    "llm",
+    "observability",
+    "open-source"
+  ],
+  "category": "framework",
+  "relevance_score": 0.8,
+  "score": 8,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

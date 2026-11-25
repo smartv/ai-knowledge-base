@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0002",
+  "title": "deepseek-ai/deepseek-harness",
+  "source": "github_trending",
+  "source_url": "https://github.com/deepseek-ai/deepseek-harness",
+  "source_id": "deepseek-ai/deepseek-harness",
+  "author": "deepseek-ai",
+  "language": "en",
+  "published_at": "2026-11-22T11:00:05Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "DeepSeek 在 GitHub 上开源了 deepseek-harness（简称 dsh），定位为面向 AI 智能体的插件化运行框架，核心理念是“一切皆插件”。项目以 TypeScript 实现，围绕 ai-agents 主题构建，并配套 cordis 与 dsh-plugin 等插件机制相关话题。它要解决的是智能体系统中能力扩展与组件复用的问题：通过统一的插件抽象，把工具、能力与运行时组件纳入同一套装配体系，降低组合与扩展成本。该项目热度极高，星标数接近 28.7 万，说明社区对 DeepSeek 官方智能体基础设施关注度很高；其插件化思路也为智能体编排与运行时设计提供了可参考的工程范式，值得关注智能体框架演进的开发者跟进。",
+  "key_points": [
+    "DeepSeek 官方开源的智能体框架，TypeScript 实现",
+    "核心理念“一切皆插件”，统一能力扩展抽象",
+    "配套 cordis 与 dsh-plugin 插件机制话题",
+    "星标近 28.7 万，社区关注度极高"
+  ],
+  "tags": [
+    "agent",
+    "framework",
+    "open-source"
+  ],
+  "category": "framework",
+  "relevance_score": 0.8,
+  "score": 8,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

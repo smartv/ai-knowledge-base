@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0006",
+  "title": "open-webui/open-webui",
+  "source": "github_trending",
+  "source_url": "https://github.com/open-webui/open-webui",
+  "source_id": "open-webui/open-webui",
+  "author": "open-webui",
+  "language": "en",
+  "published_at": "2026-11-25T01:23:38Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "open-webui/open-webui 是一个用户友好的 AI 界面项目，支持 Ollama、OpenAI API 等多种后端，以 Svelte 编写，采用自托管方式部署。它解决的是本地或自建大模型缺少统一、易用 Web 交互入口的问题，让用户无需自行开发前端即可对话、管理模型并接入 RAG 等能力。项目在 GitHub 上获得约 15.9 万星标，热度极高，且标签中包含 MCP、RAG、self-hosted 等方向，说明其正从单纯聊天界面扩展为聚合多模型与工具能力的入口，对关注开源 LLM 部署与自托管方案的开发者具有较高参考价值。",
+  "key_points": [
+    "提供统一 Web UI，可对接 Ollama、OpenAI API 等多种模型后端",
+    "支持自托管部署，适合本地或私有环境使用",
+    "Topics 覆盖 MCP、RAG，显示其向工具与检索能力扩展",
+    "GitHub 星标约 15.9 万，社区关注度极高",
+    "使用 Svelte 编写，属于开源前端界面项目"
+  ],
+  "tags": [
+    "llm",
+    "open-source",
+    "rag"
+  ],
+  "category": "tool",
+  "relevance_score": 0.8,
+  "score": 8,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

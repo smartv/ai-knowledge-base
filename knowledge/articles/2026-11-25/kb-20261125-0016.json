@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0016",
+  "title": "Show HN: Carry – Save every AI conversations as Markdown, in a folder you Own",
+  "source": "hacker_news",
+  "source_url": "https://carry.md/",
+  "source_id": "https://news.ycombinator.com/item?id=50637995",
+  "author": "iankit17",
+  "language": "en",
+  "published_at": "2026-11-25T03:19:02Z",
+  "collected_at": "2026-11-25T04:10:18Z",
+  "summary": "Carry 是一个面向多款主流 AI 聊天产品的对话归档工具，可将 Gemini、ChatGPT、Claude 和 Grok 中的聊天内容自动保存为 Markdown 文件，存放在用户本地文件夹中。它解决的是 AI 对话分散在各平台、难以统一留存与检索的问题，并支持跨应用搜索以及一键交接给他人。值得关注之处在于它强调本地所有权与可移植性：以纯文本 Markdown 形式落盘，避免对话被锁定在单一服务内，便于长期保存、二次整理和协作流转。不过条目未说明具体实现方式、平台覆盖完整度与同步机制，实际价值仍需验证。",
+  "key_points": [
+    "自动将 Gemini、ChatGPT、Claude、Grok 的对话保存为 Markdown",
+    "文件存于用户本地文件夹，强调数据所有权",
+    "支持跨应用搜索与一键交接给他人",
+    "未说明实现方式与平台覆盖完整度"
+  ],
+  "tags": [
+    "llm",
+    "tool",
+    "workflow"
+  ],
+  "category": "tool",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hacker-news-20261125T041034699152Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

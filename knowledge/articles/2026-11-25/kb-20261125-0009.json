@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0009",
+  "title": "firecrawl/firecrawl",
+  "source": "github_trending",
+  "source_url": "https://github.com/firecrawl/firecrawl",
+  "source_id": "firecrawl/firecrawl",
+  "author": "firecrawl",
+  "language": "en",
+  "published_at": "2026-11-25T03:55:26Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "firecrawl/firecrawl 是一个用 TypeScript 实现的开源项目，定位为面向 AI 智能体的知识基础设施。它通过统一 API 提供搜索、网页抓取与数据访问能力，并声称可接入 550 多个数据提供方，同时支持 HTML 转 Markdown 等数据提取处理。该项目解决的是智能体在获取外部网页与多源数据时接口分散、抓取与清洗流程繁琐的问题，让开发者用一套 API 即可为智能体补充可用的知识来源。其 GitHub 星标数约 20.9 万，热度很高，说明网页抓取与搜索类基础设施在智能体应用中被广泛需要，值得关注其 API 设计与数据源整合方式。",
+  "key_points": [
+    "统一 API 提供搜索、抓取与数据访问能力",
+    "声称可接入 550 多个数据提供方",
+    "支持 HTML 转 Markdown 等数据提取处理",
+    "TypeScript 实现，GitHub 星标约 20.9 万"
+  ],
+  "tags": [
+    "agent",
+    "rag",
+    "open-source"
+  ],
+  "category": "tool",
+  "relevance_score": 0.7,
+  "score": 7,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

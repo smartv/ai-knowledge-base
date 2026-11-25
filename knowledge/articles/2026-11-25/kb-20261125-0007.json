@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0007",
+  "title": "affaan-m/ECC",
+  "source": "github_trending",
+  "source_url": "https://github.com/affaan-m/ECC",
+  "source_id": "affaan-m/ECC",
+  "author": "affaan-m",
+  "language": "en",
+  "published_at": "2026-11-23T04:55:48Z",
+  "collected_at": "2026-11-25T04:10:07Z",
+  "summary": "affaan-m/ECC 是一个面向 AI 编码代理的“代理框架性能优化系统”，以 JavaScript 实现，定位为 Claude Code、Codex、Opencode、Cursor 等编码代理之上的增强层。据其描述，它围绕技能（skills）、本能（instincts）、记忆（memory）、安全（security）与“研究优先”的开发方式，为代理提供可复用的能力与运行支撑，目标是提升代理在真实开发任务中的表现与可靠性。项目在 GitHub 趋势榜获得约 31 万星标，热度极高，说明开发者对编码代理的上下文管理、记忆与安全增强有强烈需求。值得关注之处在于它试图把代理能力沉淀为可配置的系统层，而非单一提示词技巧，并覆盖多个主流编码代理客户端；但描述未披露具体实现机制与评测数据，实际效果需进一步验证。",
+  "key_points": [
+    "定位为代理框架性能优化系统，覆盖技能、记忆、安全等维度",
+    "面向 Claude Code、Codex、Cursor 等多个编码代理客户端",
+    "以 JavaScript 实现，GitHub 星标约 31 万，热度极高",
+    "强调研究优先的开发方式，但未披露具体机制与评测数据"
+  ],
+  "tags": [
+    "agent",
+    "coding-assistant",
+    "llm"
+  ],
+  "category": "framework",
+  "relevance_score": 0.7,
+  "score": 7,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T041034698105Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}
