@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "feed": "lobsters-ai-ml",
+  "source": "rss",
+  "collected_at": "2026-11-25T10:55:21Z",
+  "count": 5,
+  "items": [
+    {
+      "feed": "lobsters-ai-ml",
+      "source": "rss",
+      "source_id": "https://lobste.rs/s/kn0pmh",
+      "title": "Matrix Multiplication is Θ(n^2.25)",
+      "url": "https://raw.githubusercontent.com/openai/math/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+      "author": "raw.githubusercontent.com via kchanqvq",
+      "description": "<p><a href=\"https://lobste.rs/s/kn0pmh/matrix_multiplication_is_n_2_25\">Comments</a></p>",
+      "published_at": "2026-11-25T03:15:59Z",
+      "collected_at": "2026-11-25T10:55:21Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://lobste.rs/t/ai.rss",
+        "feed_category": "综合技术"
+      }
+    },
+    {
+      "feed": "lobsters-ai-ml",
+      "source": "rss",
+      "source_id": "https://lobste.rs/s/vciex6",
+      "title": "9/UX: a Macintosh-inspired desktop for 9front",
+      "url": "https://progrium.github.io/9ux/",
+      "author": "progrium.github.io via lproven",
+      "description": "<p>I have written a story about this on the Register, but of course I can't post that here.</p> <p>I think this is a quite astonishing effort and could make 9front <em>considerably</em> more usable... but it's bot-assisted, so I don't think they'll take it.</p> <p><a href=\"https://lobste.rs/s/vciex6/9_ux_macintosh_inspired_desktop_for\">Comments</a></p>",
+      "published_at": "2026-11-24T18:37:29Z",
+      "collected_at": "2026-11-25T10:55:21Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://lobste.rs/t/ai.rss",
+        "feed_category": "综合技术"
+      }
+    },
+    {
+      "feed": "lobsters-ai-ml",
+      "source": "rss",
+      "source_id": "https://lobste.rs/s/gn5qb1",
+      "title": "Rebuilding my local voice assistant pipeline",
+      "url": "https://blog.platypush.tech/article/Rewriting-my-voice-assistant-pipeline",
+      "author": "blog.platypush.tech by blacklight",
+      "description": "<p><a href=\"https://lobste.rs/s/gn5qb1/rebuilding_my_local_voice_assistant\">Comments</a></p>",
+      "published_at": "2026-11-19T19:50:25Z",
+      "collected_at": "2026-11-25T10:55:21Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://lobste.rs/t/ai.rss",
+        "feed_category": "综合技术"
+      }
+    },
+    {
+      "feed": "lobsters-ai-ml",
+      "source": "rss",
+      "source_id": "https://lobste.rs/s/svneem",
+      "title": "The sleep framework: A new way for LLMs to retain knowledge in continual learning",
+      "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
+      "author": "research.google via snej",
+      "description": "<p><a href=\"https://lobste.rs/s/svneem/sleep_framework_new_way_for_llms_retain\">Comments</a></p>",
+      "published_at": "2026-11-18T21:53:43Z",
+      "collected_at": "2026-11-25T10:55:21Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://lobste.rs/t/ai.rss",
+        "feed_category": "综合技术"
+      }
+    },
+    {
+      "feed": "lobsters-ai-ml",
+      "source": "rss",
+      "source_id": "https://lobste.rs/s/8mbnbd",
+      "title": "Energy-Based Reasoners: Your Recurrent Reasoner Should Be an Energy-Based Model",
+      "url": "https://energy-based-reasoners.github.io/",
+      "author": "energy-based-reasoners.github.io via xyproto",
+      "description": "<p><a href=\"https://lobste.rs/s/8mbnbd/energy_based_reasoners_your_recurrent\">Comments</a></p>",
+      "published_at": "2026-11-18T14:45:20Z",
+      "collected_at": "2026-11-25T10:55:21Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://lobste.rs/t/ai.rss",
+        "feed_category": "综合技术"
+      }
+    }
+  ]
+}

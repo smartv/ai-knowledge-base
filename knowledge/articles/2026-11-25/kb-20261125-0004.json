@@ -34,9 +34,9 @@
       "sent_at": null
     },
     "feishu": {
-      "status": "pending",
+      "status": "sent",
       "message_id": null,
-      "sent_at": null
+      "sent_at": "2026-11-25T10:56:43Z"
     }
   }
 }

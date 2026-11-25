@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0041",
+  "title": "An Indic Voice Agent with CUGA",
+  "source": "rss",
+  "source_url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+  "source_id": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+  "author": "huggingface-blog",
+  "language": "en",
+  "published_at": "2026-11-25T10:22:09Z",
+  "collected_at": "2026-11-25T10:55:21Z",
+  "summary": "该条目是 Hugging Face 博客上由 IBM Research 发布的一篇关于“An Indic Voice Agent with CUGA”的文章，标题表明其主题是面向印度语系（Indic）的语音智能体，并涉及名为 CUGA 的组件或方案。由于条目未提供描述，无法确认 CUGA 的具体含义、技术架构、所用模型、数据集或评测结果，也无法判断其是开源工具、框架还是产品。其值得关注之处在于：印度语系覆盖多种语言与使用人群，语音智能体若能在该语种场景落地，可能对多语言语音交互与本地化部署具有参考价值；同时 IBM Research 的参与也提示其可能带有研究或工程实践背景。但受限于信息不足，实际价值需待原文细节披露后评估。",
+  "key_points": [
+    "标题指向面向印度语系的语音智能体方案",
+    "涉及名为 CUGA 的组件，具体含义未在条目中说明",
+    "由 IBM Research 发布在 Hugging Face 博客",
+    "缺少描述，技术细节与评测结果无法确认"
+  ],
+  "tags": [
+    "speech",
+    "agent",
+    "multimodal"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/huggingface-blog-20261125T105523532452Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}
