@@ -26,6 +26,7 @@ from __future__ import annotations
 import logging
 import math
 import os
+import threading
 import time
 from abc import ABC, abstractmethod
 from collections.abc import Mapping, Sequence
@@ -40,6 +41,10 @@ except ModuleNotFoundError as exc:  # pragma: no cover - import guard
     ) from exc
 
 __all__ = [
+    "CNY_PRICING",
+    "CnyPricing",
+    "CostRecord",
+    "CostTracker",
     "LLMError",
     "LLMProvider",
     "LLMResponse",
@@ -49,12 +54,14 @@ __all__ = [
     "ProviderSpec",
     "Usage",
     "calculate_cost",
+    "calculate_cny_cost",
     "chat_with_retry",
     "create_provider",
     "estimate_cost",
     "estimate_messages_tokens",
     "estimate_tokens",
     "quick_chat",
+    "tracker",
 ]
 
 LOGGER = logging.getLogger(__name__)
@@ -135,6 +142,233 @@ class ModelPricing:
         """Validate non-negative prices."""
         if self.input_per_1m_usd < 0 or self.output_per_1m_usd < 0:
             raise ValueError("token 单价不能为负数")
+
+
+@dataclass(frozen=True)
+class CnyPricing:
+    """Reference price in CNY per one million tokens.
+
+    Attributes:
+        input_per_1m_cny: Price for one million input tokens, in CNY.
+        output_per_1m_cny: Price for one million output tokens, in CNY.
+    """
+
+    input_per_1m_cny: float
+    output_per_1m_cny: float
+
+    def __post_init__(self) -> None:
+        """Validate non-negative prices."""
+        if self.input_per_1m_cny < 0 or self.output_per_1m_cny < 0:
+            raise ValueError("token 单价不能为负数")
+
+
+# 人民币参考价格（元 / 百万 tokens）。厂商调价后请同步更新此表，
+# 需要精确账单时也可以向 CostTracker 传入自定义 pricing。
+CNY_PRICING: Mapping[str, CnyPricing] = {
+    "deepseek": CnyPricing(1.0, 2.0),
+    "qwen": CnyPricing(4.0, 12.0),
+    "openai": CnyPricing(150.0, 600.0),
+}
+
+_REPORT_HEADER = (
+    f"{'provider':<12}{'calls':>8}{'prompt':>14}"
+    f"{'completion':>14}{'cost_cny':>14}"
+)
+
+
+def calculate_cny_cost(usage: Usage, pricing: CnyPricing) -> float:
+    """Calculate the estimated cost of one call in CNY.
+
+    Args:
+        usage: Token usage for the call.
+        pricing: Provider price per one million tokens.
+
+    Returns:
+        Estimated cost in CNY.
+    """
+    return (
+        usage.prompt_tokens * pricing.input_per_1m_cny
+        + usage.completion_tokens * pricing.output_per_1m_cny
+    ) / 1_000_000
+
+
+@dataclass
+class CostRecord:
+    """Accumulated usage and cost for one provider.
+
+    Attributes:
+        calls: Number of recorded calls.
+        prompt_tokens: Total input tokens.
+        completion_tokens: Total output tokens.
+        cost_cny: Total estimated cost in CNY.
+    """
+
+    calls: int = 0
+    prompt_tokens: int = 0
+    completion_tokens: int = 0
+    cost_cny: float = 0.0
+
+    @property
+    def total_tokens(self) -> int:
+        """Return the total number of input and output tokens."""
+        return self.prompt_tokens + self.completion_tokens
+
+
+class CostTracker:
+    """Track LLM token usage and estimated cost in CNY.
+
+    The tracker is process-local and thread-safe. A module-level
+    :data:`tracker` instance is shared by every provider, and
+    :meth:`OpenAICompatibleProvider.chat` records each successful call
+    automatically.
+
+    Example:
+        >>> tracker.reset()
+        >>> _ = tracker.record(Usage(1_000_000, 1_000_000), "deepseek")
+        >>> tracker.estimated_cost("deepseek")
+        3.0
+    """
+
+    def __init__(
+        self,
+        pricing: Mapping[str, CnyPricing] | None = None,
+    ) -> None:
+        """Initialize the tracker.
+
+        Args:
+            pricing: Optional price table override, keyed by provider name.
+        """
+        self._pricing: dict[str, CnyPricing] = dict(pricing or CNY_PRICING)
+        self._records: dict[str, CostRecord] = {}
+        self._lock = threading.Lock()
+
+    def record(self, usage: Usage, provider: str) -> float:
+        """Record one successful LLM call.
+
+        Args:
+            usage: Token usage reported or estimated for the call.
+            provider: Provider identifier, e.g. ``"deepseek"``.
+
+        Returns:
+            Estimated cost of this call in CNY.
+
+        Raises:
+            ValueError: If ``provider`` is empty.
+        """
+        name = provider.strip().lower()
+        if not name:
+            raise ValueError("provider 不能为空")
+
+        pricing = self._pricing.get(name)
+        if pricing is None:
+            LOGGER.warning(
+                "未配置 %s 的人民币价格，本次成本按 0 记录",
+                name,
+            )
+            cost = 0.0
+        else:
+            cost = calculate_cny_cost(usage, pricing)
+
+        with self._lock:
+            record = self._records.setdefault(name, CostRecord())
+            record.calls += 1
+            record.prompt_tokens += usage.prompt_tokens
+            record.completion_tokens += usage.completion_tokens
+            record.cost_cny += cost
+
+        LOGGER.debug(
+            "成本记录 provider=%s prompt=%d completion=%d cost=%.6f CNY",
+            name,
+            usage.prompt_tokens,
+            usage.completion_tokens,
+            cost,
+        )
+        return cost
+
+    def estimated_cost(self, provider: str | None = None) -> float:
+        """Return the accumulated estimated cost in CNY.
+
+        Args:
+            provider: Provider identifier; when omitted, return the total
+                across all recorded providers.
+
+        Returns:
+            Estimated cost in CNY.
+        """
+        with self._lock:
+            if provider is None:
+                return sum(item.cost_cny for item in self._records.values())
+            record = self._records.get(provider.strip().lower())
+            return record.cost_cny if record is not None else 0.0
+
+    def report(self, provider: str | None = None) -> str:
+        """Log a cost report and return the rendered text.
+
+        Args:
+            provider: Provider identifier; when omitted, report every recorded
+                provider plus a total row.
+
+        Returns:
+            The report text, with one line per provider.
+        """
+        rows = self._rows(provider)
+        lines = [
+            "LLM 成本报告（人民币，按内置价格表估算）",
+            _REPORT_HEADER,
+        ]
+        lines.extend(
+            _format_cost_row(name, record) for name, record in rows
+        )
+
+        if not rows:
+            lines.append("（无调用记录）")
+        elif provider is None:
+            lines.extend(("-" * 62, _format_cost_row("TOTAL", _sum_records(rows))))
+
+        for line in lines:
+            LOGGER.info("%s", line)
+
+        return "\n".join(lines)
+
+    def _rows(self, provider: str | None) -> list[tuple[str, CostRecord]]:
+        """Return the provider rows selected for a report."""
+        with self._lock:
+            names = (
+                [provider.strip().lower()]
+                if provider is not None
+                else sorted(self._records)
+            )
+            return [
+                (name, self._records.get(name, CostRecord()))
+                for name in names
+            ]
+
+    def reset(self) -> None:
+        """Clear every recorded call, token count and cost."""
+        with self._lock:
+            self._records.clear()
+
+
+def _format_cost_row(name: str, record: CostRecord) -> str:
+    """Format one provider row of the cost report."""
+    return (
+        f"{name:<12}{record.calls:>8}{record.prompt_tokens:>14,}"
+        f"{record.completion_tokens:>14,}{record.cost_cny:>14.6f}"
+    )
+
+
+def _sum_records(rows: Sequence[tuple[str, CostRecord]]) -> CostRecord:
+    """Aggregate report rows into a total record."""
+    return CostRecord(
+        calls=sum(record.calls for _, record in rows),
+        prompt_tokens=sum(record.prompt_tokens for _, record in rows),
+        completion_tokens=sum(record.completion_tokens for _, record in rows),
+        cost_cny=sum(record.cost_cny for _, record in rows),
+    )
+
+
+# 进程级共享实例，供各 Provider 与流水线共用。
+tracker = CostTracker()
 
 
 @dataclass(frozen=True)
@@ -506,13 +740,16 @@ class OpenAICompatibleProvider(LLMProvider):
         cost_usd = self.estimate_cost(usage, model=used_model)
         response_model = data.get("model")
 
-        return LLMResponse(
+        response = LLMResponse(
             content=content,
             usage=usage,
             model=response_model if isinstance(response_model, str) else used_model,
             provider=self._name,
             cost_usd=cost_usd,
         )
+        # 仅在请求成功并解析出 content 后记账，失败重试不会重复计数。
+        tracker.record(usage, self._name)
+        return response
 
     def estimate_cost(self, usage: Usage, model: str | None = None) -> float:
         """Estimate USD cost for this provider.

@@ -58,6 +58,7 @@ try:
         LLMProvider,
         chat_with_retry,
         create_provider,
+        tracker,
     )
 except ModuleNotFoundError:  # 以 python -m pipeline.pipeline 方式运行时走包内导入
     from pipeline.model_client import (  # type: ignore[no-redef]
@@ -65,6 +66,7 @@ except ModuleNotFoundError:  # 以 python -m pipeline.pipeline 方式运行时�
         LLMProvider,
         chat_with_retry,
         create_provider,
+        tracker,
     )
 
 LOGGER = logging.getLogger(__name__)
@@ -1952,6 +1954,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     except KeyboardInterrupt:
         LOGGER.warning("用户中断")
         return 130
+    finally:
+        # 干跑不调用 LLM，无需输出空报告。
+        if not config.dry_run:
+            tracker.report()
 
     if config.dry_run:
         return 0 if stats.collected > 0 else 1
