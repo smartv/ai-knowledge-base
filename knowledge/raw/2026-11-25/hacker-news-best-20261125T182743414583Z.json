@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "feed": "hacker-news-best",
+  "source": "hacker_news",
+  "collected_at": "2026-11-25T18:27:40Z",
+  "count": 2,
+  "items": [
+    {
+      "feed": "hacker-news-best",
+      "source": "hacker_news",
+      "source_id": "https://news.ycombinator.com/item?id=50630309",
+      "title": "Tidal bans AI-generated music",
+      "url": "https://variety.com/2026/music/news/tidal-bans-ai-generated-music-1236956924/",
+      "author": "theanonymousone",
+      "description": "Article URL: https://variety.com/2026/music/news/tidal-bans-ai-generated-music-1236956924/ Comments URL: https://news.ycombinator.com/item?id=50630309 Points: 334 # Comments: 324",
+      "published_at": "2026-11-24T16:12:38Z",
+      "collected_at": "2026-11-25T18:27:40Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://hnrss.org/best?q=AI+OR+LLM+OR+agent",
+        "feed_category": "综合技术"
+      }
+    },
+    {
+      "feed": "hacker-news-best",
+      "source": "hacker_news",
+      "source_id": "https://news.ycombinator.com/item?id=50627340",
+      "title": "LLM agents work for their parent companies, not for you",
+      "url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+      "author": "surprisetalk",
+      "description": "Article URL: https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/ Comments URL: https://news.ycombinator.com/item?id=50627340 Points: 994 # Comments: 409",
+      "published_at": "2026-11-24T12:40:15Z",
+      "collected_at": "2026-11-25T18:27:40Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://hnrss.org/best?q=AI+OR+LLM+OR+agent",
+        "feed_category": "综合技术"
+      }
+    }
+  ]
+}
