@@ -25,6 +25,7 @@
 ├── pipeline/
 │   ├── pipeline.py               # 四步流水线与 CLI
 │   ├── model_client.py           # 多厂商 LLM 客户端
+│   ├── distribute.py             # 飞书群机器人分发（仅标准库）
 │   └── rss_sources.yaml          # RSS 数据源配置
 ├── hooks/
 │   ├── validate_json.py          # 知识条目 schema 校验
@@ -62,6 +63,8 @@ export GITHUB_TOKEN=ghp_...           # 可选，但能显著提高 GitHub 速�
 | `LLM_MODEL` | 否 | 覆盖 provider 默认模型 |
 | `LLM_BASE_URL` | 否 | 覆盖 OpenAI 兼容接口地址 |
 | `GITHUB_TOKEN` | 否 | GitHub API Token，提高请求配额 |
+| `FEISHU_WEBHOOK_URL` | 否 | 飞书群自定义机器人 Webhook，配置后才会分发 |
+| `FEISHU_WEBHOOK_SECRET` | 否 | 机器人签名校验密钥，强烈建议配置 |
 
 ## 运行流水线
 
@@ -131,6 +134,59 @@ python3 hooks/validate_json.py "knowledge/articles/2026-11-25/*.json"
 # 五维质量评分，出现 C 级时退出码为 1
 python3 hooks/check_quality.py "knowledge/articles/2026-11-25/*.json"
 ```
+
+## 分发到飞书
+
+`pipeline/distribute.py` 把当日条目推送为一张飞书消息卡片，仅依赖标准库，
+可以在 `pip install` 之前运行。
+
+### 配置群机器人
+
+1. 目标群 → **设置 → 群机器人 → 添加机器人 → 自定义机器人**
+2. 安全设置选 **签名校验**，复制密钥
+3. 复制 Webhook URL
+
+> 不要选「IP 白名单」：GitHub Actions 的出口 IP 不固定，选了会一直 403。
+
+### 本地运行
+
+```bash
+# 只打印卡片 JSON，不发送、不写文件
+python3 pipeline/distribute.py --date 2026-11-25 --dry-run
+
+export FEISHU_WEBHOOK_URL='https://open.feishu.cn/open-apis/bot/v2/hook/xxx'
+export FEISHU_WEBHOOK_SECRET='xxx'
+
+# 真发，并回写 distribution.feishu 状态
+python3 pipeline/distribute.py --date 2026-11-25 --mark-distribution
+```
+
+| 参数 | 默认 | 说明 |
+| --- | --- | --- |
+| `--date` | 今天 UTC | 要推送的日期目录 |
+| `--channel` | `feishu` | 分发渠道（当前仅飞书） |
+| `--top` | `5` | 卡片内最多条目数 |
+| `--min-score` | `6` | 推送所需最低评分 |
+| `--dry-run` | 关闭 | 只打印卡片 JSON |
+| `--force` | 关闭 | 已有 `sent` 记录时仍重新发送 |
+| `--mark-distribution` | 关闭 | 发送成功后回写条目状态 |
+| `--repo-url` | `GITHUB_REPOSITORY` 推断 | 「查看全部」按钮的仓库地址 |
+
+### 推送规则
+
+- 只推送 `status` 为 `analyzed` 或 `published` 且 `score >= 6` 的条目，
+  未经分析的内容不会进入群聊；
+- 按分数降序取前 `--top` 条，摘要截断 180 字；
+- 卡片底部按钮跳转到当日目录，可查看全部条目；
+- 回写只改动 `distribution` 字段，且自定义机器人不返回 `message_id`，
+  该字段保持 `null`；
+- 当日已有条目被标记为 `sent` 时默认跳过，避免手动重跑刷屏。
+
+### 在 GitHub Actions 中
+
+在 **Settings → Secrets and variables → Actions** 配置 `FEISHU_WEBHOOK_URL` 与
+`FEISHU_WEBHOOK_SECRET`。工作流会在提交前推送并回写状态；未配置时自动跳过。
+推送失败会让本次运行标红，但数据仍会正常提交。
 
 ## MCP Server
 

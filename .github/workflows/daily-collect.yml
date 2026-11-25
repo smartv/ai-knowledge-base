@@ -4,6 +4,7 @@ name: Daily Collect
 #
 # 需要在仓库 Settings 中配置：
 #   Secrets: DEEPSEEK_API_KEY / QWEN_API_KEY（或 DASHSCOPE_API_KEY）/ OPENAI_API_KEY
+#   Secrets: FEISHU_WEBHOOK_URL / FEISHU_WEBHOOK_SECRET（可选，不配置则跳过分发）
 #   Variables（可选）: LLM_PROVIDER，默认 deepseek
 # 未配置的密钥留空即可，流水线只会使用 LLM_PROVIDER 对应的那一个。
 
@@ -54,6 +55,7 @@ jobs:
         run: python pipeline/pipeline.py --sources github,rss --limit 20 --verbose
 
       - name: Validate new articles
+        id: validate
         shell: bash
         run: |
           set -euo pipefail
@@ -72,7 +74,27 @@ jobs:
           python hooks/validate_json.py "${files[@]}"
           python hooks/check_quality.py "${files[@]}"
 
+      # 推送放在提交之前：一次 commit 同时包含新数据与 distribution.feishu 状态。
+      # 推送失败会让 job 标红（不静默失败），但下面的提交步骤仍然执行，数据不丢。
+      - name: Notify Feishu
+        shell: bash
+        env:
+          FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          FEISHU_WEBHOOK_SECRET: ${{ secrets.FEISHU_WEBHOOK_SECRET }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if [ -z "${FEISHU_WEBHOOK_URL:-}" ]; then
+            echo "未配置 FEISHU_WEBHOOK_URL，跳过分发"
+            exit 0
+          fi
+          python pipeline/distribute.py \
+            --date "$(date -u +%F)" --channel feishu --mark-distribution
+
       - name: Commit and push
+        # 数据先落地：即使上一步推送失败也提交，避免丢失当次采集结果。
+        # 但校验失败时不得提交不合格数据。
+        if: always() && steps.validate.outcome == 'success'
         shell: bash
         run: |
           set -euo pipefail
