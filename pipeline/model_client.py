@@ -23,6 +23,7 @@ Example:
 
 from __future__ import annotations
 
+import json
 import logging
 import math
 import os
@@ -55,6 +56,8 @@ __all__ = [
     "Usage",
     "calculate_cost",
     "calculate_cny_cost",
+    "chat",
+    "chat_json",
     "chat_with_retry",
     "create_provider",
     "estimate_cost",
@@ -987,6 +990,109 @@ def chat_with_retry(
     raise RuntimeError("chat_with_retry 未执行任何尝试")
 
 
+def chat(
+    prompt: str,
+    *,
+    system: str | None = None,
+    provider: LLMProvider | None = None,
+    model: str | None = None,
+    temperature: float = DEFAULT_TEMPERATURE,
+    max_tokens: int | None = None,
+) -> tuple[str, Usage]:
+    """Send one prompt and return ``(text, usage)``.
+
+    Args:
+        prompt: User prompt.
+        system: Optional system prompt.
+        provider: Provider instance; created from the environment when omitted.
+        model: Model override.
+        temperature: Sampling temperature.
+        max_tokens: Maximum generated tokens.
+
+    Returns:
+        A tuple of assistant text and token usage.
+
+    Raises:
+        ValueError: If ``prompt`` is empty.
+        LLMError: If the request fails after retries.
+    """
+    if not prompt.strip():
+        raise ValueError("prompt 不能为空")
+
+    client = provider or create_provider()
+    messages: list[Message] = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": prompt})
+
+    response = chat_with_retry(
+        client,
+        messages,
+        model=model,
+        temperature=temperature,
+        max_tokens=max_tokens,
+    )
+    return response.content, response.usage
+
+
+def _parse_json_object(text: str) -> dict[str, Any]:
+    """Extract one JSON object from raw model output."""
+    candidate = text.strip()
+    try:
+        payload = json.loads(candidate)
+    except json.JSONDecodeError:
+        start = candidate.find("{")
+        end = candidate.rfind("}")
+        if start < 0 or end <= start:
+            raise LLMError("LLM 响应中没有 JSON 对象")
+        try:
+            payload = json.loads(candidate[start : end + 1])
+        except json.JSONDecodeError as exc:
+            raise LLMError(f"LLM 响应不是合法 JSON: {exc}") from exc
+
+    if not isinstance(payload, dict):
+        raise LLMError("LLM 响应必须是 JSON 对象")
+    return payload
+
+
+def chat_json(
+    prompt: str,
+    *,
+    system: str | None = None,
+    provider: LLMProvider | None = None,
+    model: str | None = None,
+    temperature: float = 0.0,
+    max_tokens: int | None = None,
+) -> tuple[dict[str, Any], Usage]:
+    """Send one prompt and parse the reply as a JSON object.
+
+    Args:
+        prompt: User prompt.
+        system: Optional system prompt; defaults to a JSON-only instruction.
+        provider: Provider instance; created from the environment when omitted.
+        model: Model override.
+        temperature: Sampling temperature, 0 by default for stable output.
+        max_tokens: Maximum generated tokens.
+
+    Returns:
+        A tuple of parsed JSON object and token usage.
+
+    Raises:
+        ValueError: If ``prompt`` is empty.
+        LLMError: If the request fails or the reply is not a JSON object.
+    """
+    instruction = system or "只输出一个 JSON 对象，不要 Markdown 代码块或额外解释。"
+    text, usage = chat(
+        prompt,
+        system=instruction,
+        provider=provider,
+        model=model,
+        temperature=temperature,
+        max_tokens=max_tokens,
+    )
+    return _parse_json_object(text), usage
+
+
 def quick_chat(
     prompt: str,
     *,
@@ -1013,23 +1119,15 @@ def quick_chat(
         ValueError: If ``prompt`` is empty.
         LLMError: If the request fails after retries.
     """
-    if not prompt.strip():
-        raise ValueError("prompt 不能为空")
-
-    client = provider or create_provider()
-    messages: list[Message] = []
-    if system:
-        messages.append({"role": "system", "content": system})
-    messages.append({"role": "user", "content": prompt})
-
-    response = chat_with_retry(
-        client,
-        messages,
+    text, _ = chat(
+        prompt,
+        system=system,
+        provider=provider,
         model=model,
         temperature=temperature,
         max_tokens=max_tokens,
     )
-    return response.content
+    return text
 
 
 class _FlakyProvider(LLMProvider):
