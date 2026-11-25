@@ -1,0 +1,3 @@
+# 运行时依赖：流水线与 LLM 客户端通过 httpx 发起 HTTP 请求。
+# MCP Server（mcp_knowledge_server.py）与 hooks/ 下的校验脚本仅使用标准库。
+httpx>=0.27,<1.0

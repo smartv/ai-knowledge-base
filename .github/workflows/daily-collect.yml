@@ -1,0 +1,100 @@
+name: Daily Collect
+
+# 每天 UTC 08:00（北京时间 16:00）自动采集，也支持在 Actions 页面手动触发。
+#
+# 需要在仓库 Settings 中配置：
+#   Secrets: DEEPSEEK_API_KEY / QWEN_API_KEY（或 DASHSCOPE_API_KEY）/ OPENAI_API_KEY
+#   Variables（可选）: LLM_PROVIDER，默认 deepseek
+# 未配置的密钥留空即可，流水线只会使用 LLM_PROVIDER 对应的那一个。
+
+on:
+  schedule:
+    # GitHub Actions 的 cron 固定为 UTC，08:00 UTC = 16:00 Asia/Shanghai
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 避免定时任务与手动触发同时写入，后者排队而不是取消前一次运行。
+concurrency:
+  group: daily-collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    name: Collect, validate and commit
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      LLM_PROVIDER: ${{ vars.LLM_PROVIDER || 'deepseek' }}
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+      DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      # 提高 GitHub Search API 的速率上限；GITHUB_TOKEN 由 Actions 自动提供。
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect and analyze
+        run: python pipeline/pipeline.py --sources github,rss --limit 20 --verbose
+
+      - name: Validate new articles
+        shell: bash
+        run: |
+          set -euo pipefail
+          files=()
+          while IFS= read -r file; do
+            files+=("$file")
+          done < <(
+            git ls-files --others --exclude-standard -- knowledge/articles \
+              | grep '\.json$' || true
+          )
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "没有新增文章，跳过校验"
+            exit 0
+          fi
+          echo "校验 ${#files[@]} 个新增文章"
+          python hooks/validate_json.py "${files[@]}"
+          python hooks/check_quality.py "${files[@]}"
+
+      - name: Commit and push
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add knowledge
+          if git diff --cached --quiet; then
+            echo "没有新数据，跳过提交"
+            exit 0
+          fi
+
+          new_articles=$(
+            git diff --cached --name-only --diff-filter=A -- knowledge/articles \
+              | grep -c '\.json$' || true
+          )
+          if [ "${new_articles}" -eq 0 ]; then
+            echo "没有新增文章，跳过提交（raw 快照不单独提交）"
+            exit 0
+          fi
+
+          date_utc=$(date -u +%F)
+          git commit -m "data: collect ${new_articles} articles on ${date_utc}"
+          git push origin HEAD:main
