@@ -1,0 +1,76 @@
+# RSS 数据源配置
+#
+# 字段说明：
+#   name     唯一标识，用于日志与 knowledge/raw/ 下的快照文件名
+#   url      RSS / Atom 地址
+#   category 分类：综合技术 / AI 研究 / 公司博客 / 中文社区
+#   enabled  true 采集，false 跳过
+#
+# 默认关闭的源有两类：
+#   1. 日更量过大（arXiv cs.AI 每天 700+ 条）；
+#   2. RSS 官方可用性待确认（Anthropic、机器之心）。
+# 量子位 RSS 当前可用，但按需求先默认关闭，人工确认后再开启。
+#
+# 修改后无需改代码，流水线会在每次采集时重新读取本文件。
+
+sources:
+  # ---------------------------------------------------------------------------
+  # 综合技术
+  # ---------------------------------------------------------------------------
+  - name: hacker-news-best
+    url: https://hnrss.org/best?q=AI+OR+LLM+OR+agent
+    category: 综合技术
+    enabled: true
+  # HNRSS 的 best + q 查询偶尔超时或返回 5xx，流水线会自动重试；
+  # 若长期不可用，可改为 https://hnrss.org/best（全量 Best）。
+
+  - name: lobsters-ai-ml
+    url: https://lobste.rs/t/ai.rss
+    category: 综合技术
+    enabled: true
+  # Lobsters 没有独立的机器学习标签（/t/ml 实际是 MetaLanguage / OCaml），
+  # AI 标签已覆盖 AI/ML 相关讨论。
+
+  # ---------------------------------------------------------------------------
+  # AI 研究
+  # ---------------------------------------------------------------------------
+  - name: arxiv-cs-ai
+    url: https://rss.arxiv.org/rss/cs.AI
+    category: AI 研究
+    enabled: false
+  # arXiv cs.AI 每天约 700+ 条，默认关闭；开启时建议配合 --limit 控制分析成本。
+
+  # ---------------------------------------------------------------------------
+  # 公司博客
+  # ---------------------------------------------------------------------------
+  - name: openai-blog
+    url: https://openai.com/news/rss.xml
+    category: 公司博客
+    enabled: true
+
+  - name: anthropic-research
+    url: https://news.google.com/rss/search?q=site%3Aanthropic.com%2Fresearch&hl=en-US&gl=US&ceid=US%3Aen
+    category: 公司博客
+    enabled: false
+  # Anthropic 官方截至 2026-11 未提供 RSS，这里用 Google News 站点聚合兜底。
+  # 条目链接会跳转到 Google News，默认关闭，确认可接受后再启用。
+
+  - name: huggingface-blog
+    url: https://huggingface.co/blog/feed.xml
+    category: 公司博客
+    enabled: true
+
+  # ---------------------------------------------------------------------------
+  # 中文社区
+  # ---------------------------------------------------------------------------
+  - name: jiqizhixin
+    url: https://www.jiqizhixin.com/rss
+    category: 中文社区
+    enabled: false
+  # 该地址目前返回 HTML 而非 RSS，需等待官方修复或改用其他聚合方式。
+
+  - name: qbitai
+    url: https://www.qbitai.com/feed
+    category: 中文社区
+    enabled: false
+  # RSS 当前可用（WordPress feed），按需求先默认关闭，人工确认后启用。
