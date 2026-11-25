@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0023",
+  "title": "promptfoo/promptfoo",
+  "source": "github_trending",
+  "source_url": "https://github.com/promptfoo/promptfoo",
+  "source_id": "promptfoo/promptfoo",
+  "author": "promptfoo",
+  "language": "en",
+  "published_at": "2026-11-25T00:15:22Z",
+  "collected_at": "2026-11-25T08:04:11Z",
+  "summary": "promptfoo 是一个用于测试提示词、智能体与 RAG 的开源框架，同时提供面向 AI 的红队测试、渗透测试与漏洞扫描能力。它通过简单的声明式配置，支持在 GPT、Claude、Gemini、DeepSeek 等模型之间比较性能，并提供命令行与 CI/CD 集成，便于把提示词与智能体评测纳入持续交付流程。项目以 TypeScript 实现，描述中称 OpenAI 与 Anthropic 也在使用。其价值在于把提示词工程从手工试错转为可版本化、可自动化的评测与安全测试，覆盖 LLMOps 中的质量保障与风险发现环节，对需要稳定上线 LLM 应用的团队具有参考意义。",
+  "key_points": [
+    "支持提示词、智能体与 RAG 的自动化测试与评测",
+    "提供红队测试、渗透测试与漏洞扫描等安全能力",
+    "可对比 GPT、Claude、Gemini、DeepSeek 等模型表现",
+    "声明式配置并集成命令行与 CI/CD 流程",
+    "描述称 OpenAI 与 Anthropic 在使用该项目"
+  ],
+  "tags": [
+    "llm",
+    "evaluation",
+    "framework"
+  ],
+  "category": "framework",
+  "relevance_score": 0.8,
+  "score": 8,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T080415162769Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

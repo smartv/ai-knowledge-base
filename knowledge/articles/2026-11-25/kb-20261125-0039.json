@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0039",
+  "title": "9/UX: a Macintosh-inspired desktop for 9front",
+  "source": "rss",
+  "source_url": "https://progrium.github.io/9ux/",
+  "source_id": "https://lobste.rs/s/vciex6",
+  "author": "progrium.github.io via lproven",
+  "language": "en",
+  "published_at": "2026-11-24T18:37:29Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "该条目介绍一个名为 9/UX 的项目，为 9front 操作系统提供受 Macintosh 启发的桌面环境。描述指出作者已在 The Register 撰写相关报道，并认为这一成果相当惊人，可能让 9front 的可用性大幅提升；但同时也提到该项目由机器人辅助完成，因此作者判断 9front 社区可能不会接纳它。条目本身未提供界面细节、技术实现或性能数据，价值主要在于展示小众操作系统在桌面体验上的改进尝试，以及围绕 AI 辅助贡献能否被开源社区接受的讨论。",
+  "key_points": [
+    "为 9front 提供 Macintosh 风格桌面环境",
+    "作者认为可显著提升 9front 可用性",
+    "项目由机器人辅助完成，可能不被社区接纳",
+    "条目未给出实现细节或性能数据"
+  ],
+  "tags": [
+    "tool",
+    "open-source",
+    "product"
+  ],
+  "category": "tool",
+  "relevance_score": 0.3,
+  "score": 3,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/lobsters-ai-ml-20261125T080415164628Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

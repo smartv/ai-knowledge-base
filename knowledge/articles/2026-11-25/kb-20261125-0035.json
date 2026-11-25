@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0035",
+  "title": "Clay helps sales teams win with Codex and ChatGPT",
+  "source": "rss",
+  "source_url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+  "source_id": "https://openai.com/business/customer-stories/clay-plugins-openai",
+  "author": "openai-blog",
+  "language": "en",
+  "published_at": "2026-11-24T00:00:00Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "这是 OpenAI 发布的一则企业客户案例，介绍销售情报平台 Clay 如何借助 ChatGPT 与 Codex 的集成能力，帮助其用户完成交易调研，并将数据转化为进入市场（go-to-market）的策略动作。描述中提到由 GPT-6 模型承担其中的推理工作。该条目的价值在于展示大模型与代码生成能力在销售与市场运营场景中的落地方式，属于厂商侧的应用叙事而非技术细节披露，因此对关注企业级 AI 集成路径的读者有参考意义，但不包含可复现的方法或评测数据。",
+  "key_points": [
+    "OpenAI 客户案例，介绍 Clay 使用 ChatGPT 与 Codex 集成",
+    "用途为交易调研与将数据转化为市场策略",
+    "描述称由 GPT-6 模型负责推理环节",
+    "属厂商应用叙事，未披露技术细节或评测数据"
+  ],
+  "tags": [
+    "openai",
+    "product",
+    "workflow"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/openai-blog-20261125T080415165098Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

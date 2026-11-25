@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0025",
+  "title": "DietrichGebert/ponytail",
+  "source": "github_trending",
+  "source_url": "https://github.com/DietrichGebert/ponytail",
+  "source_id": "DietrichGebert/ponytail",
+  "author": "DietrichGebert",
+  "language": "en",
+  "published_at": "2026-11-22T02:31:58Z",
+  "collected_at": "2026-11-25T08:04:11Z",
+  "summary": "ponytail 是一个面向 AI 编程代理的提示词/技能插件项目，定位是让 AI 代理像“房间里最懒的资深开发者”那样思考，核心主张是“最好的代码是你从未写过的代码”。它通过 agent-skills、claude-code-plugin、cursor-rules 等形式，把 YAGNI（你不会需要它）等工程原则注入代理行为，引导代理减少不必要的代码生成。项目以 JavaScript 实现，在 GitHub 上获得约 19.8 万星标，热度极高。其价值在于回应 AI 编码助手普遍过度生成、堆砌冗余代码的问题，尝试用提示工程手段约束代理输出、降低维护成本，对使用 Claude Code、Cursor 等工具的开发者具有直接参考意义。",
+  "key_points": [
+    "让 AI 代理模仿“最懒资深开发者”的思维方式",
+    "以 YAGNI 原则约束代理，减少不必要代码",
+    "提供 Claude Code 插件与 Cursor 规则等集成形式",
+    "GitHub 星标约 19.8 万，社区关注度极高"
+  ],
+  "tags": [
+    "agent",
+    "prompt-engineering",
+    "coding-assistant"
+  ],
+  "category": "tool",
+  "relevance_score": 0.7,
+  "score": 7,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T080415162769Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0037",
+  "title": "Matrix Multiplication is Θ(n^2.25)",
+  "source": "rss",
+  "source_url": "https://raw.githubusercontent.com/openai/math/main/preprints/The-matrix-multiplication-exponent-is-nine-fourths-November-24-2026/paper.pdf",
+  "source_id": "https://lobste.rs/s/kn0pmh",
+  "author": "raw.githubusercontent.com via kchanqvq",
+  "language": "en",
+  "published_at": "2026-11-25T03:15:59Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "该条目指向一篇预印本论文，标题声称矩阵乘法的时间复杂度为 Θ(n^2.25)，即矩阵乘法指数为九分之四（9/4）。矩阵乘法指数是理论计算机科学与算法设计的核心问题之一，长期以来的上界与下界之间存在差距，任何对该指数的改进都会影响大量依赖矩阵乘法的算法复杂度分析。该条目仅提供论文链接与评论页链接，未给出摘要、证明方法、作者信息或实验数据，因此无法判断其结论的可靠性、证明是否经过同行评审，也无法确认是否推翻了既有结果。值得关注的原因在于：若结论成立，将直接改写算法复杂度理论中的基础常数；但在缺乏可验证细节的情况下，应将其视为待核实的主张而非既定事实。",
+  "key_points": [
+    "标题主张矩阵乘法复杂度为 Θ(n^2.25)，即指数为九分之四",
+    "矩阵乘法指数是算法理论中的基础性开放问题",
+    "条目仅含论文与评论链接，无摘要、证明方法或数据",
+    "结论未经同行评审，可靠性有待核实",
+    "若成立将影响大量依赖矩阵乘法的算法复杂度分析"
+  ],
+  "tags": [
+    "paper",
+    "research",
+    "deep-learning"
+  ],
+  "category": "paper",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/lobsters-ai-ml-20261125T080415164628Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

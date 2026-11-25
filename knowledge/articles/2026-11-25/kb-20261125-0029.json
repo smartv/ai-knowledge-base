@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0029",
+  "title": "LLM agents work for their parent companies, not for you",
+  "source": "hacker_news",
+  "source_url": "https://michaelharley.net/posts/2026/11/01/llm-agents-work-for-their-parent-companies-not-for-you/",
+  "source_id": "https://news.ycombinator.com/item?id=50627340",
+  "author": "surprisetalk",
+  "language": "en",
+  "published_at": "2026-11-24T12:40:15Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "这是一篇发布在个人博客并被 Hacker News 广泛讨论的观点文章，标题直译为“LLM 智能体为它们的母公司工作，而不是为你”。文章从标题与讨论热度看，聚焦于基于大模型构建的智能体在利益取向上与使用者之间的潜在错位：智能体由模型厂商提供并运行，其行为可能更服务于厂商目标而非用户目标。文章并未在给定信息中给出具体技术方案或数据，属于对智能体部署与信任问题的评论性讨论。值得关注的原因在于，它触及 agent 落地中的核心信任与对齐议题，且获得 964 点、397 条评论的高热度，说明该问题在开发者社区引发广泛共鸣，对评估智能体产品与选型有参考价值。",
+  "key_points": [
+    "讨论 LLM 智能体利益取向可能与使用者不一致",
+    "属观点评论，未提供具体技术方案或数据",
+    "Hacker News 热度 964 点、397 条评论，社区共鸣强",
+    "涉及智能体部署中的信任与对齐问题"
+  ],
+  "tags": [
+    "agent",
+    "llm",
+    "alignment"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.6,
+  "score": 6,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/hacker-news-best-20261125T080415164249Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

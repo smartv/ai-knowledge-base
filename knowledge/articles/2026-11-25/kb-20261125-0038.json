@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0038",
+  "title": "Rebuilding my local voice assistant pipeline",
+  "source": "rss",
+  "source_url": "https://blog.platypush.tech/article/Rewriting-my-voice-assistant-pipeline",
+  "source_id": "https://lobste.rs/s/gn5qb1",
+  "author": "blog.platypush.tech by blacklight",
+  "language": "en",
+  "published_at": "2026-11-19T19:50:25Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "这是一篇来自 Platypush 作者 blacklight 的博客文章，记录其重建本地语音助手流水线的过程。标题与描述表明内容属于个人实践性的工程复盘，涉及语音助手管线的重写，但提供的描述仅包含 Lobste.rs 评论链接，未给出具体技术方案、组件选型、性能数据或问题细节。因此无法确认其解决了哪些具体问题，也无法判断其技术深度与可复用性。对关注本地语音助手、自托管与开源自动化管线的开发者而言，该主题具有一定参考价值，但由于信息量有限，其实际价值需阅读原文后才能评估。",
+  "key_points": [
+    "作者以博客形式复盘本地语音助手流水线的重建过程",
+    "描述仅含评论链接，缺少技术细节与性能数据",
+    "主题涉及本地语音助手与自托管自动化管线",
+    "具体方案与收益需阅读原文才能判断"
+  ],
+  "tags": [
+    "speech",
+    "open-source",
+    "automation"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/lobsters-ai-ml-20261125T080415164628Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

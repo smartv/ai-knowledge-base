@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "feed": "openai-blog",
+  "source": "rss",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "count": 5,
+  "items": [
+    {
+      "feed": "openai-blog",
+      "source": "rss",
+      "source_id": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+      "author": "openai-blog",
+      "description": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
+      "published_at": "2026-11-24T13:00:00Z",
+      "collected_at": "2026-11-25T08:04:14Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://openai.com/news/rss.xml",
+        "feed_category": "公司博客"
+      }
+    },
+    {
+      "feed": "openai-blog",
+      "source": "rss",
+      "source_id": "https://openai.com/index/searching-for-distant-planets-with-astra",
+      "title": "Searching for distant planets with Astra",
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+      "author": "openai-blog",
+      "description": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
+      "published_at": "2026-11-24T11:00:00Z",
+      "collected_at": "2026-11-25T08:04:14Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://openai.com/news/rss.xml",
+        "feed_category": "公司博客"
+      }
+    },
+    {
+      "feed": "openai-blog",
+      "source": "rss",
+      "source_id": "https://openai.com/business/customer-stories/intentful-dots",
+      "title": "How Intentful uses dots to make more time for growth",
+      "url": "https://openai.com/business/customer-stories/intentful-dots",
+      "author": "openai-blog",
+      "description": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
+      "published_at": "2026-11-24T00:00:00Z",
+      "collected_at": "2026-11-25T08:04:14Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://openai.com/news/rss.xml",
+        "feed_category": "公司博客"
+      }
+    },
+    {
+      "feed": "openai-blog",
+      "source": "rss",
+      "source_id": "https://openai.com/business/customer-stories/ifood",
+      "title": "How iFood scales coding agents across 15,000 repositories",
+      "url": "https://openai.com/business/customer-stories/ifood",
+      "author": "openai-blog",
+      "description": "",
+      "published_at": "2026-11-24T00:00:00Z",
+      "collected_at": "2026-11-25T08:04:14Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://openai.com/news/rss.xml",
+        "feed_category": "公司博客"
+      }
+    },
+    {
+      "feed": "openai-blog",
+      "source": "rss",
+      "source_id": "https://openai.com/business/customer-stories/clay-plugins-openai",
+      "title": "Clay helps sales teams win with Codex and ChatGPT",
+      "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+      "author": "openai-blog",
+      "description": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning.",
+      "published_at": "2026-11-24T00:00:00Z",
+      "collected_at": "2026-11-25T08:04:14Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://openai.com/news/rss.xml",
+        "feed_category": "公司博客"
+      }
+    }
+  ]
+}

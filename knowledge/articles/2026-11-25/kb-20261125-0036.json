@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0036",
+  "title": "Energy-Based Reasoners: Your Recurrent Reasoner Should Be an Energy-Based Model",
+  "source": "rss",
+  "source_url": "https://energy-based-reasoners.github.io/",
+  "source_id": "https://lobste.rs/s/8mbnbd",
+  "author": "energy-based-reasoners.github.io via xyproto",
+  "language": "en",
+  "published_at": "2026-11-18T14:45:20Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "该条目指向一个项目主页，标题主张循环推理器应当采用能量基模型（Energy-Based Model）。从标题与描述可判断，其核心议题是：面向推理任务的循环式模型架构，是否应以能量基模型作为建模范式，而非当前常见的做法。它试图回应循环推理器在建模与推理机制上的设计选择问题，为相关架构讨论提供一种替代思路。值得关注之处在于，它把能量基模型与循环推理这两个方向联系起来，可能影响后续对推理模型架构的讨论；但条目仅提供评论链接，未给出方法细节、实验数据或结论，实际价值需以原文为准，当前信息不足以支撑更高评价。",
+  "key_points": [
+    "标题主张循环推理器应采用能量基模型",
+    "聚焦推理模型的架构建模范式选择",
+    "将能量基模型与循环推理两个方向结合",
+    "条目仅有评论链接，缺少方法与实验细节"
+  ],
+  "tags": [
+    "reasoning",
+    "model",
+    "research"
+  ],
+  "category": "paper",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/lobsters-ai-ml-20261125T080415164628Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

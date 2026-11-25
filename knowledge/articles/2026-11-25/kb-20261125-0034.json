@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0034",
+  "title": "Tidal bans AI-generated music",
+  "source": "hacker_news",
+  "source_url": "https://variety.com/2026/music/news/tidal-bans-ai-generated-music-1236956924/",
+  "source_id": "https://news.ycombinator.com/item?id=50630309",
+  "author": "theanonymousone",
+  "language": "en",
+  "published_at": "2026-11-24T16:12:38Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "Tidal 宣布禁止 AI 生成音乐，相关消息在 Hacker News 上获得 324 分和 312 条评论，引发广泛讨论。该条目本身仅包含文章链接与讨论链接，未提供禁令的具体范围、执行方式或生效时间等细节。其核心议题是流媒体平台如何界定并限制 AI 生成内容，涉及版权归属、艺术家权益与平台治理。值得关注的原因在于，这是主流音乐平台对生成式 AI 内容明确表态的动向，可能影响音乐分发规则与创作者生态，并成为 AI 内容治理讨论中的参考案例。",
+  "key_points": [
+    "Tidal 宣布禁止 AI 生成音乐",
+    "Hacker News 讨论热度较高，评论超 300 条",
+    "条目未披露禁令范围与执行细节",
+    "涉及平台治理与艺术家权益议题"
+  ],
+  "tags": [
+    "ai",
+    "product",
+    "opinion"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/hacker-news-best-20261125T080415164249Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

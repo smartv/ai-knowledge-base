@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0032",
+  "title": "Searching for distant planets with Astra",
+  "source": "rss",
+  "source_url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+  "source_id": "https://openai.com/index/searching-for-distant-planets-with-astra",
+  "author": "openai-blog",
+  "language": "en",
+  "published_at": "2026-11-24T11:00:00Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "该条目介绍两位业余天文学家借助 Codex 与 Astra，在 NASA 开普勒和 TESS 太空望远镜的公开数据中搜寻潜在系外行星。它展示了大模型与智能体工具如何被用于真实科学发现流程，把公开天文数据转化为可探索的候选目标。值得关注之处在于，这体现了 AI 工具从通用编程辅助延伸到科研数据分析的潜力，也说明非专业研究者可能借助此类工具参与天文研究。条目本身来自 OpenAI 博客，属于应用案例分享，未提供具体技术细节或发现数量，因此更适合作为 AI 辅助科研的观察样本，而非可直接复现的方法论文档。",
+  "key_points": [
+    "两位业余天文学家使用 Codex 与 Astra 分析 NASA 公开望远镜数据",
+    "目标是在开普勒和 TESS 数据中寻找潜在系外行星",
+    "体现 AI 编程与智能体工具在科研数据分析中的应用",
+    "属于应用案例分享，未披露具体技术细节与发现数量"
+  ],
+  "tags": [
+    "agent",
+    "openai",
+    "research"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/openai-blog-20261125T080415165098Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

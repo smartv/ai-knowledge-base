@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0031",
+  "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+  "source": "rss",
+  "source_url": "https://huggingface.co/blog/harness-adapters-at-scale",
+  "source_id": "https://huggingface.co/blog/harness-adapters-at-scale",
+  "author": "huggingface-blog",
+  "language": "en",
+  "published_at": "2026-11-20T00:00:00Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "该条目是 Hugging Face 博客发布的一篇介绍性文章，主题为“harness adapters”，即通过适配器将用户偏好的模型接入其使用的 harness，以提升性能并优化成本。由于条目未提供描述，文章的具体技术机制、支持的模型范围、性能与成本改善幅度、是否开源及配套工具均无法确认。从标题可判断，它面向需要在既有评测或运行框架中灵活替换模型的开发者，试图解决模型与 harness 绑定带来的适配负担和成本问题。值得关注之处在于，若该方案成立，可降低模型切换与评测复用的门槛，对模型选型、推理成本控制和 harness 生态的互操作性有潜在价值；但缺乏细节，实际影响需以原文为准。",
+  "key_points": [
+    "介绍 harness adapters，用于把偏好模型适配到所用 harness",
+    "目标是提升性能并改善成本，具体幅度未在条目中给出",
+    "未提供描述，技术细节与支持范围无法确认",
+    "对模型切换、评测复用和成本控制有潜在价值"
+  ],
+  "tags": [
+    "llm",
+    "framework",
+    "evaluation"
+  ],
+  "category": "tool",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/huggingface-blog-20261125T080415165724Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

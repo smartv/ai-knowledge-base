@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0030",
+  "title": "How iFood scales coding agents across 15,000 repositories",
+  "source": "rss",
+  "source_url": "https://openai.com/business/customer-stories/ifood",
+  "source_id": "https://openai.com/business/customer-stories/ifood",
+  "author": "openai-blog",
+  "language": "en",
+  "published_at": "2026-11-24T00:00:00Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "该条目是 OpenAI 商业客户故事，标题显示 iFood 在 15,000 个代码仓库中规模化部署编码智能体。由于没有描述，只能确认其主题为编码智能体的大规模跨仓库应用，具体技术方案、指标与成效均未提供。值得关注之处在于，它指向企业级编码智能体从单仓库试点走向全组织多仓库覆盖的工程化挑战，涉及权限、上下文获取、工作流集成与治理等规模化问题；对评估编码智能体落地路径的团队具有参考价值，但信息量有限，需结合原文进一步核实。",
+  "key_points": [
+    "OpenAI 客户故事，主题为 iFood 规模化部署编码智能体",
+    "覆盖 15,000 个代码仓库，属企业级多仓库场景",
+    "无描述，技术细节与量化成效未知",
+    "反映编码智能体从试点走向组织级落地的趋势"
+  ],
+  "tags": [
+    "coding-assistant",
+    "agent",
+    "deployment"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/openai-blog-20261125T080415165098Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

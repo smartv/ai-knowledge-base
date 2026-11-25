@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0022",
+  "title": "mlflow/mlflow",
+  "source": "github_trending",
+  "source_url": "https://github.com/mlflow/mlflow",
+  "source_id": "mlflow/mlflow",
+  "author": "mlflow",
+  "language": "en",
+  "published_at": "2026-11-25T07:56:29Z",
+  "collected_at": "2026-11-25T08:04:11Z",
+  "summary": "MLflow 是面向 agents、LLM 与机器学习模型的开源 AI 工程平台，由 mlflow 组织维护，以 Python 实现，在 GitHub 上获得约 2.9 万星标。该平台帮助不同规模的团队调试、评估、监控和优化生产级 AI 应用，同时控制成本并管理模型与数据访问权限。其 Topics 覆盖 agentops、llm-evaluation、llmops、mlops、observability、model-management、prompt-engineering 等方向，并涉及 LangChain、OpenAI、Apache Spark 等生态集成。值得关注的原因在于：它把传统 MLOps 的模型管理与面向 LLM/agent 的评估、可观测性、治理能力整合到同一开源平台，为团队从实验走向生产提供统一入口，降低多工具拼接带来的运维与合规负担。",
+  "key_points": [
+    "开源 AI 工程平台，覆盖 agents、LLM 与 ML 模型的全流程管理",
+    "支持调试、评估、监控与优化生产级 AI 应用，并控制成本",
+    "提供模型与数据访问管理，涉及 AI 治理与可观测性",
+    "Topics 覆盖 llmops、mlops、agentops 与 prompt-engineering 等方向",
+    "Python 实现，GitHub 星标约 2.9 万，生态集成较广"
+  ],
+  "tags": [
+    "observability",
+    "open-source",
+    "framework"
+  ],
+  "category": "framework",
+  "relevance_score": 0.8,
+  "score": 8,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T080415162769Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0033",
+  "title": "The sleep framework: A new way for LLMs to retain knowledge in continual learning",
+  "source": "rss",
+  "source_url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
+  "source_id": "https://lobste.rs/s/svneem",
+  "author": "research.google via snej",
+  "language": "en",
+  "published_at": "2026-11-18T21:53:43Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "谷歌研究团队在官方博客提出“睡眠框架”（Sleep Framework），将其作为让大语言模型在持续学习中保留已学知识的新思路。该框架针对的核心问题是持续学习中的灾难性遗忘：模型在依次学习新任务时容易覆盖旧知识。条目将其定位为一种新方法，但未给出具体机制、实验数据或实现细节。值得关注的原因在于，持续学习能力直接关系到 LLM 能否低成本地长期更新而不必反复全量重训，而谷歌研究博客的发布也意味着该方向获得了主流研究机构的关注。由于目前仅有标题与博客入口，实际效果与可复现性仍需等待论文或代码验证。",
+  "key_points": [
+    "提出睡眠框架，用于缓解 LLM 持续学习中的知识遗忘",
+    "目标是让模型学习新任务时保留旧知识",
+    "来源为谷歌研究博客，属研究性方法发布",
+    "条目未披露具体机制、实验数据与代码"
+  ],
+  "tags": [
+    "llm",
+    "training",
+    "research"
+  ],
+  "category": "paper",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/lobsters-ai-ml-20261125T080415164628Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0040",
+  "title": "How Intentful uses dots to make more time for growth",
+  "source": "rss",
+  "source_url": "https://openai.com/business/customer-stories/intentful-dots",
+  "source_id": "https://openai.com/business/customer-stories/intentful-dots",
+  "author": "openai-blog",
+  "language": "en",
+  "published_at": "2026-11-24T00:00:00Z",
+  "collected_at": "2026-11-25T08:04:14Z",
+  "summary": "这是 OpenAI 商业客户故事栏目的一篇案例，介绍 Intentful 公司如何借助名为 dots 的产品提升效率。据描述，Marina Petrova 的 dot Aria 可帮助调研网站并撰写提案，同时主动标记消息、处理问题，从而为业务增长腾出更多时间。该条目属于厂商客户案例，而非技术发布或研究论文，未披露模型细节、性能数据或实现方式。其价值在于展示 AI 助手在调研、提案撰写与消息处理等知识工作流程中的落地形态，可作为了解企业级 AI 助手应用场景的参考；但由于信息来自单一厂商叙事，缺乏独立验证，关注度也较低，实际参考价值有限。",
+  "key_points": [
+    "OpenAI 商业客户案例，介绍 Intentful 使用 dots 产品",
+    "dot Aria 可调研网站、撰写提案并主动标记消息",
+    "目标是节省时间、为业务增长腾出空间",
+    "属厂商叙事，未披露技术细节与量化效果"
+  ],
+  "tags": [
+    "openai",
+    "agent",
+    "automation"
+  ],
+  "category": "tool",
+  "relevance_score": 0.3,
+  "score": 3,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-25/openai-blog-20261125T080415165098Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

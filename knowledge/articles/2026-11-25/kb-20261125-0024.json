@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0024",
+  "title": "Significant-Gravitas/AutoGPT",
+  "source": "github_trending",
+  "source_url": "https://github.com/Significant-Gravitas/AutoGPT",
+  "source_id": "Significant-Gravitas/AutoGPT",
+  "author": "Significant-Gravitas",
+  "language": "en",
+  "published_at": "2026-11-25T07:21:12Z",
+  "collected_at": "2026-11-25T08:04:11Z",
+  "summary": "AutoGPT 是 Significant-Gravitas 在 GitHub 上维护的开源项目，定位为让所有人都能使用并在此基础上构建 AI 的工具集，主题涵盖 agentic-ai、自主智能体、LLM 以及 Claude、GPT、Llama API 等模型接入，使用 Python 编写，当前星标约 18.8 万。它面向自主智能体（autonomous agents）的搭建与运行，试图降低构建 LLM 驱动智能体的门槛，让开发者把精力放在真正重要的事情上。值得关注的原因在于其极高的社区热度与生态影响力：它是最早把“自主智能体”概念推向大众的项目之一，长期作为该方向的参考实现与入口，对关注 agent 编排、工具调用与开源智能体基础设施的团队具有较高的观察与复用价值。",
+  "key_points": [
+    "开源自主智能体项目，Python 实现，星标约 18.8 万",
+    "定位为面向所有人的 AI 工具集，支持在其上二次构建",
+    "覆盖 Claude、GPT、Llama API 等多种 LLM 接入",
+    "是自主智能体方向的高热度参考实现与生态入口"
+  ],
+  "tags": [
+    "agent",
+    "llm",
+    "open-source"
+  ],
+  "category": "framework",
+  "relevance_score": 0.8,
+  "score": 8,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T080415162769Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

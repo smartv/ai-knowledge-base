@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261125-0027",
+  "title": "thedotmack/claude-mem",
+  "source": "github_trending",
+  "source_url": "https://github.com/thedotmack/claude-mem",
+  "source_id": "thedotmack/claude-mem",
+  "author": "thedotmack",
+  "language": "en",
+  "published_at": "2026-11-25T06:37:55Z",
+  "collected_at": "2026-11-25T08:04:11Z",
+  "summary": "claude-mem 是一个面向 AI 编码代理的持久化记忆工具，以 TypeScript 实现。它记录代理在会话中的所有操作，用 AI 对记录进行压缩，并在后续会话中注入相关上下文，从而解决代理跨会话丢失上下文、每次都要重新建立项目理解的问题。项目宣称兼容 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等多种代理，Topics 中涉及 embeddings、RAG、ChromaDB、SQLite 与长期记忆方案，说明其走的是检索增强式记忆路线。值得关注之处在于：跨会话记忆是当前代理工程化的共性痛点，而该项目同时覆盖多个主流代理客户端，且 GitHub 热度极高，可作为评估代理记忆层方案的参考样本；但其实际压缩质量与注入准确性仍需自行验证。",
+  "key_points": [
+    "记录代理会话全过程，AI 压缩后回注到未来会话",
+    "解决跨会话上下文丢失，减少重复建立项目理解",
+    "宣称兼容 Claude Code、Codex、Gemini、Copilot 等多种代理",
+    "涉及 embeddings、RAG、ChromaDB、SQLite 等记忆与检索组件",
+    "GitHub 热度极高，可作为代理记忆层方案的参考样本"
+  ],
+  "tags": [
+    "agent",
+    "memory",
+    "rag"
+  ],
+  "category": "tool",
+  "relevance_score": 0.7,
+  "score": 7,
+  "status": "analyzed",
+  "raw_path": "knowledge/raw/2026-11-25/github-20261125T080415162769Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}
