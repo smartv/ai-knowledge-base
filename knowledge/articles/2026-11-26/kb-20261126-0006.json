@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261126-0006",
+  "title": "The New York Times warns photographers not to update Photoshop over AI features",
+  "source": "hacker_news",
+  "source_url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+  "source_id": "https://news.ycombinator.com/item?id=50647673",
+  "author": "rmason",
+  "language": "en",
+  "published_at": "2026-11-25T21:18:02Z",
+  "collected_at": "2026-11-26T18:08:16Z",
+  "summary": "该条目报道《纽约时报》警告摄影师不要更新 Photoshop，原因是新版包含 AI 功能。条目本身仅提供标题、来源链接与讨论热度，未披露具体 AI 功能细节、警告的正式措辞或双方回应。其核心议题是生成式 AI 进入主流图像编辑工具后，专业摄影与新闻摄影领域对内容真实性和编辑伦理的担忧：从业者可能因默认启用或难以察觉的 AI 处理而影响作品可信度。值得关注之处在于，这反映出 AI 功能落地消费级软件时，机构用户对合规、可追溯与工作流可控性的诉求正在上升，也提示工具厂商需在功能推送与用户知情同意之间取得平衡。",
+  "key_points": [
+    "《纽约时报》警告摄影师暂勿更新 Photoshop，理由是新版含 AI 功能",
+    "条目未披露具体 AI 功能细节与警告原文，信息有限",
+    "反映新闻与专业摄影对 AI 编辑影响真实性的担忧",
+    "提示 AI 功能推送需兼顾用户知情与工作流可控"
+  ],
+  "tags": [
+    "ai",
+    "tool",
+    "opinion"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-26/hacker-news-best-20261126T180817015600Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

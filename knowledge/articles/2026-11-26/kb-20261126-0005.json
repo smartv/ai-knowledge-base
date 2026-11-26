@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261126-0005",
+  "title": "Where scientists draw the line on AI agents",
+  "source": "rss",
+  "source_url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+  "source_id": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+  "author": "huggingface-blog",
+  "language": "en",
+  "published_at": "2026-11-25T18:52:55Z",
+  "collected_at": "2026-11-26T18:08:16Z",
+  "summary": "该条目是 Hugging Face 博客上由 allenai 发布的一篇文章，标题为《Where scientists draw the line on AI agents》，讨论科学家对 AI 智能体（AI agents）的接受边界。由于条目未提供描述，无法确认文章的具体内容、研究方法或结论，只能从标题推断其主题涉及科研人员对 AI 智能体在科学研究中应用范围的界定与态度。该文值得关注之处在于，它可能反映科研群体对智能体自主性与可靠性的顾虑，为 AI 智能体在科研场景的落地提供来自科学家视角的边界讨论，但具体观点与论据需以原文为准。",
+  "key_points": [
+    "标题指向科学家对 AI 智能体应用边界的界定",
+    "由 allenai 发布在 Hugging Face 博客",
+    "条目无描述，具体内容与结论无法确认",
+    "主题涉及科研场景中智能体的接受度与顾虑"
+  ],
+  "tags": [
+    "agent",
+    "research",
+    "ai"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-26/huggingface-blog-20261126T180817016878Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

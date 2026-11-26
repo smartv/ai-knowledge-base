@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261126-0004",
+  "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+  "source": "rss",
+  "source_url": "https://huggingface.co/blog/training-swarms",
+  "source_id": "https://huggingface.co/blog/training-swarms",
+  "author": "huggingface-blog",
+  "language": "en",
+  "published_at": "2026-11-26T00:00:00Z",
+  "collected_at": "2026-11-26T18:08:16Z",
+  "summary": "该条目是 Hugging Face 博客的一篇文章，标题为《Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems》，来源为 RSS，作者为 huggingface-blog，发布时间为 2026-11-26，但条目未提供描述内容。从标题可判断，文章主题围绕多智能体系统的构建、训练与评估三个环节展开，可能面向希望搭建多智能体协作流程并对其进行训练和效果评测的开发者。由于缺少正文细节，无法确认其具体方法、框架或实验数据。该条目值得关注之处在于多智能体系统是当前 LLM 应用的重要方向，而“训练”与“评估”环节相对稀缺，若文章给出系统化实践路径，对工程落地有参考价值；但仅凭标题不足以判断其深度与原创性。",
+  "key_points": [
+    "标题指向多智能体系统的构建、训练与评估三个环节",
+    "来源为 Hugging Face 博客，作者为 huggingface-blog",
+    "条目无描述，具体方法、框架与数据均无法确认",
+    "多智能体训练与评估是当前工程落地的薄弱环节"
+  ],
+  "tags": [
+    "agent",
+    "llm",
+    "evaluation"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-26/huggingface-blog-20261126T180817016878Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

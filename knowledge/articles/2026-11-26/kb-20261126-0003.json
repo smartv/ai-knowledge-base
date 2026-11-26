@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261126-0003",
+  "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+  "source": "rss",
+  "source_url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+  "source_id": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+  "author": "huggingface-blog",
+  "language": "en",
+  "published_at": "2026-11-26T11:37:17Z",
+  "collected_at": "2026-11-26T18:08:16Z",
+  "summary": "该条目介绍 llama.cpp 面向 AMD Ryzen 处理器与 Radeon 显卡的基准测试仪表盘。由于描述为空，仅能从标题判断其性质：这是围绕 llama.cpp 推理框架的官方性能评测展示页面，用于集中呈现该框架在 AMD 平台上的基准测试结果。它解决的是用户在 AMD 硬件上选型与调优时缺乏统一性能参考的问题，使不同配置下的推理表现可被对比查看。值得关注的原因在于 llama.cpp 是开源本地 LLM 推理的重要基础设施，而 AMD 平台此前在性能透明度上相对薄弱，此类仪表盘有助于开发者评估部署可行性、选择硬件配置，并推动社区持续跟踪性能变化。",
+  "key_points": [
+    "llama.cpp 推出面向 AMD Ryzen 与 Radeon 的基准测试仪表盘",
+    "集中展示该框架在 AMD 平台上的性能测试结果",
+    "为 AMD 硬件上的本地推理选型与调优提供参考",
+    "反映开源推理框架对非英伟达平台的持续投入"
+  ],
+  "tags": [
+    "llm",
+    "benchmark",
+    "inference"
+  ],
+  "category": "tool",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-26/huggingface-blog-20261126T180817016878Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}
