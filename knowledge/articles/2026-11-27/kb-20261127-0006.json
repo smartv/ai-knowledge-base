@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261127-0006",
+  "title": "Tracking Diseases Cured by AI",
+  "source": "hacker_news",
+  "source_url": "https://diseasescuredbyai.com/",
+  "source_id": "https://news.ycombinator.com/item?id=50657307",
+  "author": "spoofyroot",
+  "language": "en",
+  "published_at": "2026-11-26T17:16:41Z",
+  "collected_at": "2026-11-27T17:50:35Z",
+  "summary": "该条目是 Hacker News 上发布的一个网站链接，标题为“Tracking Diseases Cured by AI”，即追踪由 AI 治愈的疾病，作者为 spoofyroot，发布时获得 315 分和 191 条评论。从标题与描述看，它试图以站点形式汇总 AI 在疾病治疗方面取得的成果，可能涉及医疗健康与 AI 交叉领域的案例记录。由于描述仅包含链接与评论信息，未提供具体疾病名单、数据来源或方法说明，无法确认其内容深度与可信度。值得关注之处在于它触及 AI 在医疗领域实际疗效这一高关注度话题，且社区讨论热度较高，但作为单一链接条目，信息有限，需谨慎看待其结论。",
+  "key_points": [
+    "标题指向追踪 AI 治愈疾病的网站，属医疗与 AI 交叉话题",
+    "Hacker News 热度较高，315 分、191 条评论",
+    "描述仅含链接与评论地址，无具体数据或方法说明",
+    "内容可信度与覆盖范围需进一步核实"
+  ],
+  "tags": [
+    "ai",
+    "research",
+    "evaluation"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-27/hacker-news-best-20261127T175037089977Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

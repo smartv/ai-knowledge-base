@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261127-0007",
+  "title": "Curb impacts of AI on programming to maintain EU sovereignty",
+  "source": "rss",
+  "source_url": "https://www.draketo.de/software/curb-ai-impact",
+  "source_id": "https://lobste.rs/s/lmxpfo",
+  "author": "draketo.de via aggsol",
+  "language": "en",
+  "published_at": "2026-11-27T07:00:03Z",
+  "collected_at": "2026-11-27T17:50:35Z",
+  "summary": "该条目是 draketo.de 发布的一篇观点文章，标题主张限制 AI 对编程领域的影响，以维护欧盟的数字主权。文章从欧盟主权角度讨论 AI 编程工具普及带来的影响，并呼吁对其加以约束。由于提供的描述仅包含指向 lobste.rs 评论页的链接，没有正文内容，无法得知作者的具体论据、政策建议或数据支撑。其值得关注之处在于，它把 AI 编程助手的社会影响与区域技术主权议题联系起来，属于政策与产业治理层面的讨论，而非技术实现或评测。鉴于信息量有限且热度为 0，建议仅作观点线索参考，需阅读原文后再评估其论证质量。",
+  "key_points": [
+    "文章主张限制 AI 对编程的影响以维护欧盟主权",
+    "属于政策与治理层面的观点讨论，非技术实现",
+    "描述仅含评论链接，缺少具体论据与建议",
+    "将 AI 编程工具影响与区域技术主权议题关联"
+  ],
+  "tags": [
+    "ai",
+    "opinion",
+    "coding-assistant"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.3,
+  "score": 3,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-27/lobsters-ai-ml-20261127T175037090636Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

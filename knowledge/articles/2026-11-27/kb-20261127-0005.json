@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261127-0005",
+  "title": "The need for a formally verifiable mainstream programming language",
+  "source": "rss",
+  "source_url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+  "source_id": "https://lobste.rs/s/byfdgn",
+  "author": "blainehansen.me via florianhartung",
+  "language": "en",
+  "published_at": "2026-11-26T20:06:50Z",
+  "collected_at": "2026-11-27T17:50:35Z",
+  "summary": "这是一篇来自 blainehansen.me 的观点文章，经 Lobste.rs 讨论区传播，主张业界需要一门可形式化验证的主流编程语言。文章针对的核心问题是：形式化验证长期局限于小众或学术语言，而主流工程语言缺乏可验证性，导致关键系统难以获得机器可检验的正确性保证。作者认为，若验证能力无法进入日常开发所用的主流语言，高保障软件开发就只能停留在少数领域。该文值得关注之处在于它把形式化验证的可用性问题重新提为语言设计议题，而非仅视为工具链附加能力，对语言设计者与高可靠性系统开发者具有讨论价值。条目本身仅含评论链接，未提供具体技术方案或实现细节。",
+  "key_points": [
+    "主张需要一门可形式化验证的主流编程语言",
+    "指出形式化验证目前局限于小众或学术语言",
+    "关注关键系统缺乏机器可检验的正确性保证",
+    "将验证能力视为语言设计问题而非工具附加项",
+    "条目仅含讨论链接，未给出具体技术方案"
+  ],
+  "tags": [
+    "opinion",
+    "research",
+    "tool"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.4,
+  "score": 4,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-27/lobsters-ai-ml-20261127T175037090636Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

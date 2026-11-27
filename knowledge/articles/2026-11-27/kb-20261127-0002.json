@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "kb-20261127-0002",
+  "title": "AI made self-hosting fun again",
+  "source": "hacker_news",
+  "source_url": "https://janlukas.blog/posts/ai-self-hosting",
+  "source_id": "https://news.ycombinator.com/item?id=50660180",
+  "author": "jlelse",
+  "language": "en",
+  "published_at": "2026-11-26T21:47:45Z",
+  "collected_at": "2026-11-27T17:50:35Z",
+  "summary": "这是一篇来自 Hacker News 的个人博客文章，标题为《AI made self-hosting fun again》，作者 jlelse，讨论 AI 如何让自托管重新变得有趣。文章在 HN 上获得 981 分和 464 条评论，说明该话题在技术社区引发广泛共鸣。从标题与热度看，文章应围绕借助 AI 能力降低自托管服务的部署与运维门槛、提升个人搭建与维护服务的体验展开，但提供的描述仅包含链接与热度数据，未给出具体技术方案、工具或实测结论。其价值在于反映社区对 AI 辅助自托管这一方向的关注度，可作为观察个人基础设施与 AI 结合趋势的参考，具体内容需阅读原文确认。",
+  "key_points": [
+    "HN 热度 981 分、464 条评论，社区关注度高",
+    "主题为 AI 让自托管重新变得有趣",
+    "描述仅含链接与热度，无具体技术细节",
+    "可作为 AI 与个人基础设施结合的趋势参考"
+  ],
+  "tags": [
+    "ai",
+    "deployment",
+    "infrastructure"
+  ],
+  "category": "opinion",
+  "relevance_score": 0.5,
+  "score": 5,
+  "status": "rejected",
+  "raw_path": "knowledge/raw/2026-11-27/hacker-news-best-20261127T175037089977Z.json",
+  "article_path": null,
+  "distribution": {
+    "telegram": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    },
+    "feishu": {
+      "status": "pending",
+      "message_id": null,
+      "sent_at": null
+    }
+  }
+}

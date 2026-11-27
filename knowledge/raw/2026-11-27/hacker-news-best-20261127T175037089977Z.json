@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "feed": "hacker-news-best",
+  "source": "hacker_news",
+  "collected_at": "2026-11-27T17:50:35Z",
+  "count": 5,
+  "items": [
+    {
+      "feed": "hacker-news-best",
+      "source": "hacker_news",
+      "source_id": "https://news.ycombinator.com/item?id=50663595",
+      "title": "Group chat where your AI talks behind your back",
+      "url": "https://construct22.com/",
+      "author": "utiiiD",
+      "description": "Article URL: https://construct22.com/ Comments URL: https://news.ycombinator.com/item?id=50663595 Points: 568 # Comments: 247",
+      "published_at": "2026-11-27T06:44:34Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://hnrss.org/best?q=AI+OR+LLM+OR+agent",
+        "feed_category": "综合技术"
+      }
+    },
+    {
+      "feed": "hacker-news-best",
+      "source": "hacker_news",
+      "source_id": "https://news.ycombinator.com/item?id=50660180",
+      "title": "AI made self-hosting fun again",
+      "url": "https://janlukas.blog/posts/ai-self-hosting",
+      "author": "jlelse",
+      "description": "Article URL: https://janlukas.blog/posts/ai-self-hosting Comments URL: https://news.ycombinator.com/item?id=50660180 Points: 981 # Comments: 464",
+      "published_at": "2026-11-26T21:47:45Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://hnrss.org/best?q=AI+OR+LLM+OR+agent",
+        "feed_category": "综合技术"
+      }
+    },
+    {
+      "feed": "hacker-news-best",
+      "source": "hacker_news",
+      "source_id": "https://news.ycombinator.com/item?id=50657307",
+      "title": "Tracking Diseases Cured by AI",
+      "url": "https://diseasescuredbyai.com/",
+      "author": "spoofyroot",
+      "description": "Article URL: https://diseasescuredbyai.com/ Comments URL: https://news.ycombinator.com/item?id=50657307 Points: 315 # Comments: 191",
+      "published_at": "2026-11-26T17:16:41Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://hnrss.org/best?q=AI+OR+LLM+OR+agent",
+        "feed_category": "综合技术"
+      }
+    },
+    {
+      "feed": "hacker-news-best",
+      "source": "hacker_news",
+      "source_id": "https://news.ycombinator.com/item?id=50653477",
+      "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+      "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+      "author": "ritzaco",
+      "description": "Article URL: https://techstackups.com/articles/google-workspace-ai-agents-mcp/ Comments URL: https://news.ycombinator.com/item?id=50653477 Points: 403 # Comments: 326",
+      "published_at": "2026-11-26T09:44:23Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://hnrss.org/best?q=AI+OR+LLM+OR+agent",
+        "feed_category": "综合技术"
+      }
+    },
+    {
+      "feed": "hacker-news-best",
+      "source": "hacker_news",
+      "source_id": "https://news.ycombinator.com/item?id=50647673",
+      "title": "The New York Times warns photographers not to update Photoshop over AI features",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+      "author": "rmason",
+      "description": "https://archive.ph/pcUgy Comments URL: https://news.ycombinator.com/item?id=50647673 Points: 677 # Comments: 543",
+      "published_at": "2026-11-25T21:18:02Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://hnrss.org/best?q=AI+OR+LLM+OR+agent",
+        "feed_category": "综合技术"
+      }
+    }
+  ]
+}

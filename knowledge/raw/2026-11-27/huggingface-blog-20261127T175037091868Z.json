@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "feed": "huggingface-blog",
+  "source": "rss",
+  "collected_at": "2026-11-27T17:50:35Z",
+  "count": 5,
+  "items": [
+    {
+      "feed": "huggingface-blog",
+      "source": "rss",
+      "source_id": "https://huggingface.co/blog/video-trainium3",
+      "title": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+      "url": "https://huggingface.co/blog/video-trainium3",
+      "author": "huggingface-blog",
+      "description": "",
+      "published_at": "2026-11-27T00:00:00Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "feed_category": "公司博客"
+      }
+    },
+    {
+      "feed": "huggingface-blog",
+      "source": "rss",
+      "source_id": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+      "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "author": "huggingface-blog",
+      "description": "",
+      "published_at": "2026-11-26T11:37:17Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "feed_category": "公司博客"
+      }
+    },
+    {
+      "feed": "huggingface-blog",
+      "source": "rss",
+      "source_id": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+      "author": "huggingface-blog",
+      "description": "",
+      "published_at": "2026-11-26T05:05:36Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "feed_category": "公司博客"
+      }
+    },
+    {
+      "feed": "huggingface-blog",
+      "source": "rss",
+      "source_id": "https://huggingface.co/blog/training-swarms",
+      "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+      "url": "https://huggingface.co/blog/training-swarms",
+      "author": "huggingface-blog",
+      "description": "",
+      "published_at": "2026-11-26T00:00:00Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "feed_category": "公司博客"
+      }
+    },
+    {
+      "feed": "huggingface-blog",
+      "source": "rss",
+      "source_id": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+      "title": "Where scientists draw the line on AI agents",
+      "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
+      "author": "huggingface-blog",
+      "description": "",
+      "published_at": "2026-11-25T18:52:55Z",
+      "collected_at": "2026-11-27T17:50:35Z",
+      "popularity": 0,
+      "language": "en",
+      "extra": {
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "feed_category": "公司博客"
+      }
+    }
+  ]
+}
